@@ -12,18 +12,18 @@ device = torch.device('cpu')
 
 #set up ground truth data for training and testing
 ground_truth = []
-with open("backbone_model/real_world_dataset/ground_truth.json", "r") as file:
+with open("backbone_model/datasets/synthetic_dataset/ground_truth.json", "r") as file:
     ground_truth = json.load(file)
 
 ground_truth_real_world = []
-with open("backbone_model/real_world_dataset/video/ground_truth.json", "r") as file:
+with open("backbone_model/datasets/synthetic_dataset/video/ground_truth.json", "r") as file:
     ground_truth_real_world = json.load(file)
 
 # GridNet uses fixed-size images and scalar class targets, so the default
 # DataLoader collation produces image batches [B, C, H, W] and targets [B].
-dataset = Dataset('backbone_model/real_world_dataset/images', ground_truth, get_transforms())
-dataset_test = Dataset('backbone_model/real_world_dataset/images', ground_truth, get_transforms())
-dataset_real_world = Dataset('backbone_model/real_world_dataset/video', ground_truth_real_world, get_transforms())
+dataset = Dataset('backbone_model/datasets/synthetic_dataset/images', ground_truth, get_transforms())
+dataset_test = Dataset('backbone_model/datasets/synthetic_dataset/images', ground_truth, get_transforms())
+dataset_real_world = Dataset('backbone_model/datasets/synthetic_dataset/video', ground_truth_real_world, get_transforms())
 
 #make list of same size as dataset and randomize order
 indices = torch.randperm(len(dataset)).tolist()

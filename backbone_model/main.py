@@ -3,7 +3,7 @@ import video_data_objects as vid
 import real_world_objects as synthetic
 import simple_model_objects_modified as simple
 from visualize_real_world import visualize
-from real_world_dataset.generate_synthetic_data import generate_synthetic_dataset
+from datasets.synthetic_dataset.generate_synthetic_data import generate_synthetic_dataset
 
 def main():
     # train_real_world(vid.data_loader, vid.data_loader_test, 40, lr = 1e-3, finetuning = True, checkpoint = False, str = "_vid")

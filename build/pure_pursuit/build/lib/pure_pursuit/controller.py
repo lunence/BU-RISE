@@ -2,7 +2,6 @@ import math
 import numpy as np
 
 from pure_pursuit.utils import pt_to_pt_distance, sgn
-from pure_pursuit.stats import load_stats, save_stats
 
 
 """
@@ -21,8 +20,6 @@ class PurePursuit:
     def __init__(self, lookAheadDis):
         self.last_found_index = 0
         self.lookAheadDis = lookAheadDis
-        self.stats = load_stats()
-        self.stats["runs"] += 1
 
         self.reached_target = False
         self.exit = False
@@ -215,8 +212,6 @@ class PurePursuit:
             # TODO: if more than one point in the path, add condition that checks if it is last point in path
             # Reached target normally
             if(linearError<self.success_radius):
-                self.stats["successes"] += 1
-                save_stats(self.stats)
                 self.reached_target = True
 
             # Within larger "good enough" region

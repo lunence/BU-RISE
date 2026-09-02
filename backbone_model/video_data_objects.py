@@ -8,13 +8,13 @@ device = torch.device('cpu')
 
 #set up ground truth data for training and testing
 ground_truth = []
-with open("backbone_model/training_video_data/ground_truth.json", "r") as file:
+with open("backbone_model/datasets/video_dataset1/ground_truth.json", "r") as file:
     ground_truth = json.load(file)
 
 # GridNet uses fixed-size images and scalar class targets, so the default
 # DataLoader collation produces image batches [B, C, H, W] and targets [B].
-dataset = Dataset('backbone_model/training_video_data', ground_truth, get_transforms())
-dataset_test = Dataset('backbone_model/training_video_data', ground_truth, get_transforms())
+dataset = Dataset('backbone_model/datasets/video_dataset1/frames', ground_truth, get_transforms())
+dataset_test = Dataset('backbone_model/datasets/video_dataset1/frames', ground_truth, get_transforms())
 
 #make list of same size as dataset and randomize order
 indices = torch.randperm(len(dataset)).tolist()

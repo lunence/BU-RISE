@@ -1,2 +1,2 @@
 *.pth filter=lfs diff=lfs merge=lfs -text
-backbone_model/training_video_data/*.jpg filter=lfs diff=lfs merge=lfs -text
+backbone_model/datasets/video_dataset1/frames/*.jpg filter=lfs diff=lfs merge=lfs -text
