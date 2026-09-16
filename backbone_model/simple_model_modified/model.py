@@ -7,7 +7,7 @@ class GridNet(nn.Module):
         super().__init__()
 
         #mobilenet_v2 or mobilenet_v3_small
-        self.backbone = torchvision.models.mobilenet_v2(
+        self.backbone = torchvision.models.mobilenet_v3_small(
             weights="DEFAULT"
         ).features
 
@@ -15,7 +15,7 @@ class GridNet(nn.Module):
 
         self.shared = nn.Sequential(
             nn.Flatten(),
-            nn.Linear(1280, 256), #576 for mobilenet v3, 1280 for mobilnet v2
+            nn.Linear(576, 256), #576 for mobilenet v3, 1280 for mobilnet v2
             nn.ReLU(),
             nn.Dropout(0.2),
         )

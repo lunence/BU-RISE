@@ -2,8 +2,8 @@ import os
 import torch
 import cv2
 import re
-from config import WIDTH, HEIGHT
-from utils import crop_to_ratio
+from backbone_model.util.config import WIDTH, HEIGHT
+from backbone_model.util.utils import crop_to_ratio
 
 def natural_key(filename):
     return [

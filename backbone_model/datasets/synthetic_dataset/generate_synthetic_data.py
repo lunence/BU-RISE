@@ -3,8 +3,8 @@ import numpy as np
 import random
 import json
 import os
-from utils import normalize_coords
-from config import WIDTH, HEIGHT
+from backbone_model.util.utils import normalize_coords
+from backbone_model.util.config import WIDTH, HEIGHT
 
 def add_gaussian_noise(image, mean=0, sigma=25):
     """

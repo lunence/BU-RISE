@@ -1,5 +1,5 @@
 import torch
-from config import ORIENTATION_LOSS_WEIGHT, CENTER_LOSS_WEIGHT, WIDTH, HEIGHT, CENTER_CORRECT_RANGE, CE_LOSS_WEIGHT
+from backbone_model.util.config import ORIENTATION_LOSS_WEIGHT, CENTER_LOSS_WEIGHT, WIDTH, HEIGHT, CENTER_CORRECT_RANGE, CE_LOSS_WEIGHT
 
 def train_one_epoch(model, optimizer, data_loader, device, class_criterion, center_criterion, orientation_criterion):
     # training loop

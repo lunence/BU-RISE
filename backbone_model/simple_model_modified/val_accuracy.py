@@ -1,5 +1,5 @@
 import torch
-from config import CE_LOSS_WEIGHT, CENTER_LOSS_WEIGHT, ORIENTATION_LOSS_WEIGHT
+from backbone_model.util.config import CE_LOSS_WEIGHT, CENTER_LOSS_WEIGHT, ORIENTATION_LOSS_WEIGHT
 
 def calculate_val_accuracy(model, device, data_loader_test, class_criterion, center_criterion, orientation_criterion):
     # calculate avg validation loss and avg loss for each detection head (class, center, orientation)
