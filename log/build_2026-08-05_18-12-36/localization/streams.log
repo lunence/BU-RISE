@@ -1,0 +1,69 @@
+[4.139s] Invoking command in '/workspace/build/localization': PYTHONPATH=/workspace/build/localization/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/install/localization/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --uninstall --editable --build-directory /workspace/build/localization/build
+[5.020s] running develop
+[5.571s] Removing /workspace/install/localization/lib/python3.10/site-packages/localization.egg-link (link to .)
+[5.643s] Invoked command in '/workspace/build/localization' returned '0': PYTHONPATH=/workspace/build/localization/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/install/localization/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --uninstall --editable --build-directory /workspace/build/localization/build
+[5.652s] Invoking command in '/workspace/ros2_ws/src/localization': PYTHONPATH=/workspace/build/localization/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/install/localization/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/localization build --build-base /workspace/build/localization/build install --record /workspace/build/localization/install.log --install-scripts $base/lib/localization --single-version-externally-managed install_data --force
+[6.393s] running egg_info
+[6.394s] writing ../../../build/localization/localization.egg-info/PKG-INFO
+[6.397s] writing dependency_links to ../../../build/localization/localization.egg-info/dependency_links.txt
+[6.401s] writing entry points to ../../../build/localization/localization.egg-info/entry_points.txt
+[6.404s] writing requirements to ../../../build/localization/localization.egg-info/requires.txt
+[6.407s] writing top-level names to ../../../build/localization/localization.egg-info/top_level.txt
+[6.427s] reading manifest file '../../../build/localization/localization.egg-info/SOURCES.txt'
+[6.432s] adding license file 'LICENSE'
+[6.440s] writing manifest file '../../../build/localization/localization.egg-info/SOURCES.txt'
+[6.443s] running build
+[6.445s] running build_py
+[6.447s] running install
+[6.451s] running install_lib
+[6.462s] creating /workspace/install/localization/lib/python3.10/site-packages/localization
+[6.466s] copying /workspace/build/localization/build/lib/localization/detector.py -> /workspace/install/localization/lib/python3.10/site-packages/localization
+[6.473s] copying /workspace/build/localization/build/lib/localization/apriltag_node.py -> /workspace/install/localization/lib/python3.10/site-packages/localization
+[6.494s] copying /workspace/build/localization/build/lib/localization/config.py -> /workspace/install/localization/lib/python3.10/site-packages/localization
+[6.508s] copying /workspace/build/localization/build/lib/localization/trajectory_plot.py -> /workspace/install/localization/lib/python3.10/site-packages/localization
+[6.512s] copying /workspace/build/localization/build/lib/localization/localization_node.py -> /workspace/install/localization/lib/python3.10/site-packages/localization
+[6.522s] copying /workspace/build/localization/build/lib/localization/__init__.py -> /workspace/install/localization/lib/python3.10/site-packages/localization
+[6.529s] copying /workspace/build/localization/build/lib/localization/apriltag.py -> /workspace/install/localization/lib/python3.10/site-packages/localization
+[6.572s] copying /workspace/build/localization/build/lib/localization/model.py -> /workspace/install/localization/lib/python3.10/site-packages/localization
+[6.604s] creating /workspace/install/localization/lib/python3.10/site-packages/localization/robot_detector_model
+[6.624s] copying /workspace/build/localization/build/lib/localization/robot_detector_model/transforms.py -> /workspace/install/localization/lib/python3.10/site-packages/localization/robot_detector_model
+[6.635s] copying /workspace/build/localization/build/lib/localization/robot_detector_model/__init__.py -> /workspace/install/localization/lib/python3.10/site-packages/localization/robot_detector_model
+[6.641s] copying /workspace/build/localization/build/lib/localization/robot_detector_model/val_accuracy.py -> /workspace/install/localization/lib/python3.10/site-packages/localization/robot_detector_model
+[6.658s] copying /workspace/build/localization/build/lib/localization/robot_detector_model/model.py -> /workspace/install/localization/lib/python3.10/site-packages/localization/robot_detector_model
+[6.666s] copying /workspace/build/localization/build/lib/localization/robot_detector_model/dataset.py -> /workspace/install/localization/lib/python3.10/site-packages/localization/robot_detector_model
+[6.682s] copying /workspace/build/localization/build/lib/localization/robot_detector_model/loss_function.py -> /workspace/install/localization/lib/python3.10/site-packages/localization/robot_detector_model
+[6.715s] copying /workspace/build/localization/build/lib/localization/robot_detector_model/eval.py -> /workspace/install/localization/lib/python3.10/site-packages/localization/robot_detector_model
+[6.728s] copying /workspace/build/localization/build/lib/localization/robot_detector_model/training.py -> /workspace/install/localization/lib/python3.10/site-packages/localization/robot_detector_model
+[6.734s] copying /workspace/build/localization/build/lib/localization/camera.py -> /workspace/install/localization/lib/python3.10/site-packages/localization
+[6.739s] copying /workspace/build/localization/build/lib/localization/utils.py -> /workspace/install/localization/lib/python3.10/site-packages/localization
+[6.748s] copying /workspace/build/localization/build/lib/localization/world_frame.py -> /workspace/install/localization/lib/python3.10/site-packages/localization
+[6.756s] byte-compiling /workspace/install/localization/lib/python3.10/site-packages/localization/detector.py to detector.cpython-310.pyc
+[6.765s] byte-compiling /workspace/install/localization/lib/python3.10/site-packages/localization/apriltag_node.py to apriltag_node.cpython-310.pyc
+[6.775s] byte-compiling /workspace/install/localization/lib/python3.10/site-packages/localization/config.py to config.cpython-310.pyc
+[6.777s] byte-compiling /workspace/install/localization/lib/python3.10/site-packages/localization/trajectory_plot.py to trajectory_plot.cpython-310.pyc
+[6.780s] byte-compiling /workspace/install/localization/lib/python3.10/site-packages/localization/localization_node.py to localization_node.cpython-310.pyc
+[6.783s] byte-compiling /workspace/install/localization/lib/python3.10/site-packages/localization/__init__.py to __init__.cpython-310.pyc
+[6.786s] byte-compiling /workspace/install/localization/lib/python3.10/site-packages/localization/apriltag.py to apriltag.cpython-310.pyc
+[6.791s] byte-compiling /workspace/install/localization/lib/python3.10/site-packages/localization/model.py to model.cpython-310.pyc
+[6.804s] byte-compiling /workspace/install/localization/lib/python3.10/site-packages/localization/robot_detector_model/transforms.py to transforms.cpython-310.pyc
+[6.817s] byte-compiling /workspace/install/localization/lib/python3.10/site-packages/localization/robot_detector_model/__init__.py to __init__.cpython-310.pyc
+[6.825s] byte-compiling /workspace/install/localization/lib/python3.10/site-packages/localization/robot_detector_model/val_accuracy.py to val_accuracy.cpython-310.pyc
+[6.834s] byte-compiling /workspace/install/localization/lib/python3.10/site-packages/localization/robot_detector_model/model.py to model.cpython-310.pyc
+[6.842s] byte-compiling /workspace/install/localization/lib/python3.10/site-packages/localization/robot_detector_model/dataset.py to dataset.cpython-310.pyc
+[6.856s] byte-compiling /workspace/install/localization/lib/python3.10/site-packages/localization/robot_detector_model/loss_function.py to loss_function.cpython-310.pyc
+[6.870s] byte-compiling /workspace/install/localization/lib/python3.10/site-packages/localization/robot_detector_model/eval.py to eval.cpython-310.pyc
+[6.888s] byte-compiling /workspace/install/localization/lib/python3.10/site-packages/localization/robot_detector_model/training.py to training.cpython-310.pyc
+[6.903s] byte-compiling /workspace/install/localization/lib/python3.10/site-packages/localization/camera.py to camera.cpython-310.pyc
+[6.910s] byte-compiling /workspace/install/localization/lib/python3.10/site-packages/localization/utils.py to utils.cpython-310.pyc
+[6.915s] byte-compiling /workspace/install/localization/lib/python3.10/site-packages/localization/world_frame.py to world_frame.cpython-310.pyc
+[6.939s] running install_data
+[6.943s] copying resource/localization -> /workspace/install/localization/share/ament_index/resource_index/packages
+[6.946s] copying package.xml -> /workspace/install/localization/share/localization
+[6.955s] copying launch/localization_bringup.launch.py -> /workspace/install/localization/share/localization/launch
+[6.964s] running install_egg_info
+[6.977s] Copying ../../../build/localization/localization.egg-info to /workspace/install/localization/lib/python3.10/site-packages/localization-0.0.0-py3.10.egg-info
+[7.042s] running install_scripts
+[7.129s] Installing apriltag_node script to /workspace/install/localization/lib/localization
+[7.133s] Installing localization_node script to /workspace/install/localization/lib/localization
+[7.144s] writing list of installed files to '/workspace/build/localization/install.log'
+[7.253s] Invoked command in '/workspace/ros2_ws/src/localization' returned '0': PYTHONPATH=/workspace/build/localization/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/install/localization/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/localization build --build-base /workspace/build/localization/build install --record /workspace/build/localization/install.log --install-scripts $base/lib/localization --single-version-externally-managed install_data --force

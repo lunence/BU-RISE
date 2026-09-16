@@ -2,6 +2,14 @@
 
 FROM ros:humble
 
+# Install pip
+RUN apt update && apt install -y python3-pip
+
+# Install Python dependencies
+COPY requirements.txt /tmp/requirements.txt
+
+RUN pip3 install --no-cache-dir -r /tmp/requirements.txt
+
 # Added ros-humble-rmw-cyclonedds-cpp to match the LIMO's DDS implementation
 RUN apt-get update && apt-get install -y \
     ros-humble-desktop \

@@ -1,0 +1,124 @@
+[0.000000] (-) TimerEvent: {}
+[0.001637] (localization) JobQueued: {'identifier': 'localization', 'dependencies': OrderedDict()}
+[0.002071] (localization) JobStarted: {'identifier': 'localization'}
+[0.099167] (-) TimerEvent: {}
+[0.202968] (-) TimerEvent: {}
+[0.304067] (-) TimerEvent: {}
+[0.405063] (-) TimerEvent: {}
+[0.505933] (-) TimerEvent: {}
+[0.607073] (-) TimerEvent: {}
+[0.708145] (-) TimerEvent: {}
+[0.808940] (-) TimerEvent: {}
+[0.910187] (-) TimerEvent: {}
+[1.011901] (-) TimerEvent: {}
+[1.113133] (-) TimerEvent: {}
+[1.214189] (-) TimerEvent: {}
+[1.316061] (-) TimerEvent: {}
+[1.418052] (-) TimerEvent: {}
+[1.519783] (-) TimerEvent: {}
+[1.622359] (-) TimerEvent: {}
+[1.724397] (-) TimerEvent: {}
+[1.826290] (-) TimerEvent: {}
+[1.931153] (-) TimerEvent: {}
+[2.033321] (-) TimerEvent: {}
+[2.145357] (-) TimerEvent: {}
+[2.247076] (-) TimerEvent: {}
+[2.349967] (-) TimerEvent: {}
+[2.455035] (-) TimerEvent: {}
+[2.557092] (-) TimerEvent: {}
+[2.658770] (-) TimerEvent: {}
+[2.761973] (-) TimerEvent: {}
+[2.872719] (-) TimerEvent: {}
+[3.026299] (-) TimerEvent: {}
+[3.134071] (-) TimerEvent: {}
+[3.245978] (-) TimerEvent: {}
+[3.347048] (-) TimerEvent: {}
+[3.400657] (localization) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', 'build/localization', 'build', '--build-base', '/workspace/ros2_ws/src/localization/build/localization/build', 'install', '--record', '/workspace/ros2_ws/src/localization/build/localization/install.log', '--install-scripts', '$base/lib/localization', '--single-version-externally-managed', 'install_data'], 'cwd': '/workspace/ros2_ws/src/localization', 'env': {'PYTHON_BASIC_REPL': '1', 'HOSTNAME': 'a6d9d71eff99', 'GIT_ASKPASS': '/vscode/vscode-server/bin/linux-x64/8a7abeba6e03ea3af87bfbce9a1b7e48fed567b8/extensions/git/dist/askpass.sh', 'SHLVL': '2', 'LD_LIBRARY_PATH': '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib', 'BROWSER': '/vscode/vscode-server/bin/linux-x64/8a7abeba6e03ea3af87bfbce9a1b7e48fed567b8/bin/helpers/browser.sh', 'HOME': '/root', 'OLDPWD': '/workspace/ros2_ws', 'TERM_PROGRAM_VERSION': '1.129.1', 'VSCODE_IPC_HOOK_CLI': '/tmp/vscode-ipc-656d2855-fd0a-4bb3-b50b-5b124580a859.sock', 'ROS_PYTHON_VERSION': '3', 'VSCODE_GIT_ASKPASS_MAIN': '/vscode/vscode-server/bin/linux-x64/8a7abeba6e03ea3af87bfbce9a1b7e48fed567b8/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/vscode/vscode-server/bin/linux-x64/8a7abeba6e03ea3af87bfbce9a1b7e48fed567b8/node', 'PYDEVD_DISABLE_FILE_VALIDATION': '1', 'BUNDLED_DEBUGPY_PATH': '/root/.vscode-server/extensions/ms-python.debugpy-2026.6.0-linux-x64/bundled/libs/debugpy', 'VSCODE_PYTHON_AUTOACTIVATE_GUARD': '1', 'COLORTERM': 'truecolor', 'REMOTE_CONTAINERS': 'true', 'COLCON_PREFIX_PATH': '/workspace/ros2_ws/install', 'ROS_DISTRO': 'humble', 'REMOTE_CONTAINERS_IPC': '/tmp/vscode-remote-containers-ipc-58a072ad-cdb9-4f7f-a252-fab5f7539e37.sock', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm-256color', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/vscode/vscode-server/bin/linux-x64/8a7abeba6e03ea3af87bfbce9a1b7e48fed567b8/bin/remote-cli:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/root/.vscode-server/extensions/ms-python.debugpy-2026.6.0-linux-x64/bundled/scripts/noConfigScripts', 'REMOTE_CONTAINERS_SOCKETS': '["/tmp/vscode-ssh-auth-58a072ad-cdb9-4f7f-a252-fab5f7539e37.sock"]', 'VSCODE_DEBUGPY_ADAPTER_ENDPOINTS': '/root/.vscode-server/extensions/ms-python.debugpy-2026.6.0-linux-x64/.noConfigDebugAdapterEndpoints/endpoint-f8a1523726d80fb5.txt', 'LANG': 'C.UTF-8', 'PYTHONSTARTUP': '/root/.vscode-server/data/User/workspaceStorage/01cb09c21d1cd54756446af4140b33e0/ms-python.python/pythonrc.py', 'RMW_IMPLEMENTATION': 'rmw_cyclonedds_cpp', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'VSCODE_GIT_IPC_HANDLE': '/tmp/vscode-git-0a2606e695.sock', 'TERM_PROGRAM': 'vscode', 'SSH_AUTH_SOCK': '/tmp/vscode-ssh-auth-58a072ad-cdb9-4f7f-a252-fab5f7539e37.sock', 'ROS_DOMAIN_ID': '0', 'AMENT_PREFIX_PATH': '/workspace/ros2_ws/install/pure_pursuit:/workspace/ros2_ws/install/localization:/workspace/ros2_ws/install/launch:/opt/ros/humble', 'SHELL': '/bin/bash', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'PWD': '/workspace/ros2_ws/src/localization/build/localization', 'LC_ALL': 'C.UTF-8', 'PYTHONPATH': '/workspace/ros2_ws/src/localization/build/localization/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/ros2_ws/src/localization/install/localization/lib/python3.10/site-packages:/workspace/ros2_ws/install/pure_pursuit/lib/python3.10/site-packages:/workspace/ros2_ws/install/localization/lib/python3.10/site-packages:/workspace/ros2_ws/install/launch/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1'}, 'shell': False}
+[3.451021] (-) TimerEvent: {}
+[3.555143] (-) TimerEvent: {}
+[3.661637] (-) TimerEvent: {}
+[3.768477] (-) TimerEvent: {}
+[3.878350] (-) TimerEvent: {}
+[3.995336] (-) TimerEvent: {}
+[4.098635] (-) TimerEvent: {}
+[4.214359] (-) TimerEvent: {}
+[4.315981] (-) TimerEvent: {}
+[4.418060] (-) TimerEvent: {}
+[4.521313] (-) TimerEvent: {}
+[4.633385] (-) TimerEvent: {}
+[4.756399] (-) TimerEvent: {}
+[4.861014] (-) TimerEvent: {}
+[4.962927] (-) TimerEvent: {}
+[5.064221] (-) TimerEvent: {}
+[5.166226] (-) TimerEvent: {}
+[5.267069] (-) TimerEvent: {}
+[5.369961] (-) TimerEvent: {}
+[5.410251] (localization) StdoutLine: {'line': b'running egg_info\n'}
+[5.416553] (localization) StdoutLine: {'line': b'creating build/localization/localization.egg-info\n'}
+[5.418689] (localization) StdoutLine: {'line': b'writing build/localization/localization.egg-info/PKG-INFO\n'}
+[5.426473] (localization) StdoutLine: {'line': b'writing dependency_links to build/localization/localization.egg-info/dependency_links.txt\n'}
+[5.428896] (localization) StdoutLine: {'line': b'writing entry points to build/localization/localization.egg-info/entry_points.txt\n'}
+[5.434232] (localization) StdoutLine: {'line': b'writing requirements to build/localization/localization.egg-info/requires.txt\n'}
+[5.438187] (localization) StdoutLine: {'line': b'writing top-level names to build/localization/localization.egg-info/top_level.txt\n'}
+[5.444410] (localization) StdoutLine: {'line': b"writing manifest file 'build/localization/localization.egg-info/SOURCES.txt'\n"}
+[5.470963] (-) TimerEvent: {}
+[5.472512] (localization) StdoutLine: {'line': b"reading manifest file 'build/localization/localization.egg-info/SOURCES.txt'\n"}
+[5.476598] (localization) StdoutLine: {'line': b"adding license file 'LICENSE'\n"}
+[5.483974] (localization) StdoutLine: {'line': b"writing manifest file 'build/localization/localization.egg-info/SOURCES.txt'\n"}
+[5.485320] (localization) StdoutLine: {'line': b'running build\n'}
+[5.487026] (localization) StdoutLine: {'line': b'running build_py\n'}
+[5.490985] (localization) StdoutLine: {'line': b'creating /workspace/ros2_ws/src/localization/build/localization/build\n'}
+[5.493904] (localization) StdoutLine: {'line': b'creating /workspace/ros2_ws/src/localization/build/localization/build/lib\n'}
+[5.498093] (localization) StdoutLine: {'line': b'creating /workspace/ros2_ws/src/localization/build/localization/build/lib/localization\n'}
+[5.500117] (localization) StdoutLine: {'line': b'copying localization/detector.py -> /workspace/ros2_ws/src/localization/build/localization/build/lib/localization\n'}
+[5.504741] (localization) StdoutLine: {'line': b'copying localization/config.py -> /workspace/ros2_ws/src/localization/build/localization/build/lib/localization\n'}
+[5.520176] (localization) StdoutLine: {'line': b'copying localization/localization_node.py -> /workspace/ros2_ws/src/localization/build/localization/build/lib/localization\n'}
+[5.527467] (localization) StdoutLine: {'line': b'copying localization/__init__.py -> /workspace/ros2_ws/src/localization/build/localization/build/lib/localization\n'}
+[5.533585] (localization) StdoutLine: {'line': b'copying localization/apriltag.py -> /workspace/ros2_ws/src/localization/build/localization/build/lib/localization\n'}
+[5.541650] (localization) StdoutLine: {'line': b'copying localization/model.py -> /workspace/ros2_ws/src/localization/build/localization/build/lib/localization\n'}
+[5.548686] (localization) StdoutLine: {'line': b'copying localization/camera.py -> /workspace/ros2_ws/src/localization/build/localization/build/lib/localization\n'}
+[5.555651] (localization) StdoutLine: {'line': b'copying localization/utils.py -> /workspace/ros2_ws/src/localization/build/localization/build/lib/localization\n'}
+[5.565185] (localization) StdoutLine: {'line': b'copying localization/world_frame.py -> /workspace/ros2_ws/src/localization/build/localization/build/lib/localization\n'}
+[5.571987] (-) TimerEvent: {}
+[5.578191] (localization) StdoutLine: {'line': b'running install\n'}
+[5.583196] (localization) StdoutLine: {'line': b'running install_lib\n'}
+[5.589039] (localization) StdoutLine: {'line': b'creating /workspace/ros2_ws/src/localization/install/localization/lib/python3.10/site-packages/localization\n'}
+[5.591690] (localization) StdoutLine: {'line': b'copying /workspace/ros2_ws/src/localization/build/localization/build/lib/localization/detector.py -> /workspace/ros2_ws/src/localization/install/localization/lib/python3.10/site-packages/localization\n'}
+[5.602137] (localization) StdoutLine: {'line': b'copying /workspace/ros2_ws/src/localization/build/localization/build/lib/localization/config.py -> /workspace/ros2_ws/src/localization/install/localization/lib/python3.10/site-packages/localization\n'}
+[5.613721] (localization) StdoutLine: {'line': b'copying /workspace/ros2_ws/src/localization/build/localization/build/lib/localization/localization_node.py -> /workspace/ros2_ws/src/localization/install/localization/lib/python3.10/site-packages/localization\n'}
+[5.620809] (localization) StdoutLine: {'line': b'copying /workspace/ros2_ws/src/localization/build/localization/build/lib/localization/__init__.py -> /workspace/ros2_ws/src/localization/install/localization/lib/python3.10/site-packages/localization\n'}
+[5.630175] (localization) StdoutLine: {'line': b'copying /workspace/ros2_ws/src/localization/build/localization/build/lib/localization/apriltag.py -> /workspace/ros2_ws/src/localization/install/localization/lib/python3.10/site-packages/localization\n'}
+[5.640920] (localization) StdoutLine: {'line': b'copying /workspace/ros2_ws/src/localization/build/localization/build/lib/localization/model.py -> /workspace/ros2_ws/src/localization/install/localization/lib/python3.10/site-packages/localization\n'}
+[5.655208] (localization) StdoutLine: {'line': b'copying /workspace/ros2_ws/src/localization/build/localization/build/lib/localization/camera.py -> /workspace/ros2_ws/src/localization/install/localization/lib/python3.10/site-packages/localization\n'}
+[5.666760] (localization) StdoutLine: {'line': b'copying /workspace/ros2_ws/src/localization/build/localization/build/lib/localization/utils.py -> /workspace/ros2_ws/src/localization/install/localization/lib/python3.10/site-packages/localization\n'}
+[5.672978] (-) TimerEvent: {}
+[5.675168] (localization) StdoutLine: {'line': b'copying /workspace/ros2_ws/src/localization/build/localization/build/lib/localization/world_frame.py -> /workspace/ros2_ws/src/localization/install/localization/lib/python3.10/site-packages/localization\n'}
+[5.694097] (localization) StdoutLine: {'line': b'byte-compiling /workspace/ros2_ws/src/localization/install/localization/lib/python3.10/site-packages/localization/detector.py to detector.cpython-310.pyc\n'}
+[5.709138] (localization) StdoutLine: {'line': b'byte-compiling /workspace/ros2_ws/src/localization/install/localization/lib/python3.10/site-packages/localization/config.py to config.cpython-310.pyc\n'}
+[5.723520] (localization) StdoutLine: {'line': b'byte-compiling /workspace/ros2_ws/src/localization/install/localization/lib/python3.10/site-packages/localization/localization_node.py to localization_node.cpython-310.pyc\n'}
+[5.734065] (localization) StdoutLine: {'line': b'byte-compiling /workspace/ros2_ws/src/localization/install/localization/lib/python3.10/site-packages/localization/__init__.py to __init__.cpython-310.pyc\n'}
+[5.745387] (localization) StdoutLine: {'line': b'byte-compiling /workspace/ros2_ws/src/localization/install/localization/lib/python3.10/site-packages/localization/apriltag.py to apriltag.cpython-310.pyc\n'}
+[5.754910] (localization) StdoutLine: {'line': b'byte-compiling /workspace/ros2_ws/src/localization/install/localization/lib/python3.10/site-packages/localization/model.py to model.cpython-310.pyc\n'}
+[5.765490] (localization) StdoutLine: {'line': b'byte-compiling /workspace/ros2_ws/src/localization/install/localization/lib/python3.10/site-packages/localization/camera.py to camera.cpython-310.pyc\n'}
+[5.774287] (localization) StdoutLine: {'line': b'byte-compiling /workspace/ros2_ws/src/localization/install/localization/lib/python3.10/site-packages/localization/utils.py to utils.cpython-310.pyc\n'}
+[5.776755] (-) TimerEvent: {}
+[5.784439] (localization) StdoutLine: {'line': b'byte-compiling /workspace/ros2_ws/src/localization/install/localization/lib/python3.10/site-packages/localization/world_frame.py to world_frame.cpython-310.pyc\n'}
+[5.796362] (localization) StdoutLine: {'line': b'running install_data\n'}
+[5.800086] (localization) StdoutLine: {'line': b'creating /workspace/ros2_ws/src/localization/install/localization/share/ament_index\n'}
+[5.802502] (localization) StdoutLine: {'line': b'creating /workspace/ros2_ws/src/localization/install/localization/share/ament_index/resource_index\n'}
+[5.806982] (localization) StdoutLine: {'line': b'creating /workspace/ros2_ws/src/localization/install/localization/share/ament_index/resource_index/packages\n'}
+[5.809196] (localization) StdoutLine: {'line': b'copying resource/localization -> /workspace/ros2_ws/src/localization/install/localization/share/ament_index/resource_index/packages\n'}
+[5.819329] (localization) StdoutLine: {'line': b'copying package.xml -> /workspace/ros2_ws/src/localization/install/localization/share/localization\n'}
+[5.834284] (localization) StdoutLine: {'line': b'running install_egg_info\n'}
+[5.850944] (localization) StdoutLine: {'line': b'Copying build/localization/localization.egg-info to /workspace/ros2_ws/src/localization/install/localization/lib/python3.10/site-packages/localization-0.0.0-py3.10.egg-info\n'}
+[5.878094] (-) TimerEvent: {}
+[5.957620] (localization) StdoutLine: {'line': b'running install_scripts\n'}
+[5.978992] (-) TimerEvent: {}
+[6.070766] (localization) StdoutLine: {'line': b'Installing localization_node script to /workspace/ros2_ws/src/localization/install/localization/lib/localization\n'}
+[6.079931] (-) TimerEvent: {}
+[6.080769] (localization) StdoutLine: {'line': b"writing list of installed files to '/workspace/ros2_ws/src/localization/build/localization/install.log'\n"}
+[6.145880] (localization) CommandEnded: {'returncode': 0}
+[6.181011] (-) TimerEvent: {}
+[6.282124] (-) TimerEvent: {}
+[6.361302] (localization) JobEnded: {'identifier': 'localization', 'rc': 0}
+[6.374583] (-) EventReactorShutdown: {}

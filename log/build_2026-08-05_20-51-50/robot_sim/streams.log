@@ -1,0 +1,19 @@
+[15.889s] Invoking command in '/workspace/build/robot_sim': PYTHONPATH=/workspace/build/robot_sim/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/install/robot_sim/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /workspace/build/robot_sim/build --no-deps symlink_data --force
+[19.252s] running develop
+[20.698s] running egg_info
+[20.700s] writing robot_sim.egg-info/PKG-INFO
+[20.703s] writing dependency_links to robot_sim.egg-info/dependency_links.txt
+[20.704s] writing entry points to robot_sim.egg-info/entry_points.txt
+[20.706s] writing requirements to robot_sim.egg-info/requires.txt
+[20.708s] writing top-level names to robot_sim.egg-info/top_level.txt
+[20.780s] reading manifest file 'robot_sim.egg-info/SOURCES.txt'
+[20.804s] writing manifest file 'robot_sim.egg-info/SOURCES.txt'
+[20.821s] running build_ext
+[20.822s] Creating /workspace/install/robot_sim/lib/python3.10/site-packages/robot-sim.egg-link (link to .)
+[20.833s] Installing simulator script to /workspace/install/robot_sim/lib/robot_sim
+[20.841s] 
+[20.842s] Installed /workspace/build/robot_sim
+[20.843s] running symlink_data
+[20.844s] symbolically linking /workspace/build/robot_sim/resource/robot_sim -> /workspace/install/robot_sim/share/ament_index/resource_index/packages
+[20.854s] symbolically linking /workspace/build/robot_sim/package.xml -> /workspace/install/robot_sim/share/robot_sim
+[21.305s] Invoked command in '/workspace/build/robot_sim' returned '0': PYTHONPATH=/workspace/build/robot_sim/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/install/robot_sim/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /workspace/build/robot_sim/build --no-deps symlink_data --force

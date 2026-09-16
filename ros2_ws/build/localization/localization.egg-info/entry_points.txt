@@ -1,0 +1,4 @@
+[console_scripts]
+apriltag_node = localization.apriltag_node:main
+localization_node = localization.localization_node:main
+

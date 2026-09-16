@@ -1,0 +1,29 @@
+import numpy as np
+DATA_DIR = "/home/mooncyli/BU-RISE/"
+
+CENTER_LOSS_WEIGHT = 10
+ORIENTATION_LOSS_WEIGHT = 2.0
+CE_LOSS_WEIGHT = 0.5
+
+CENTER_CORRECT_RANGE = 8 #in px
+TEST_SIZE = 150
+
+HEIGHT = 120 #px
+WIDTH = 160 #px
+
+APRILTAG_HEIGHT = 480
+APRILTAG_WIDTH = 640
+# calibrated with 640x480
+K_flat = [658.2458134909692, 0.0, 360.6026651301767, 0.0, 655.4842574874588, 223.38097604011102, 0.0, 0.0, 1.0]
+K = np.array(K_flat).reshape(3, 3)
+
+CAMERA_PARAMS = (
+    K[0][0], # fx
+    K[1][1], # fy
+    K[0][2], # cx
+    K[1][2] # cy
+)
+
+K_inverse = np.linalg.inv(K)
+TAG_SIZE = 0.15 #tag size in meters
+TAG_SIZE_LIMO = 0.092

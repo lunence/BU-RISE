@@ -1,0 +1,18 @@
+[12.843s] Invoking command in '/workspace/build/localization': PYTHONPATH=/workspace/build/localization/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/install/localization/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /workspace/build/localization/build --no-deps symlink_data
+[16.094s] running develop
+[19.624s] running egg_info
+[19.628s] writing localization.egg-info/PKG-INFO
+[19.630s] writing dependency_links to localization.egg-info/dependency_links.txt
+[19.681s] writing entry points to localization.egg-info/entry_points.txt
+[19.733s] writing requirements to localization.egg-info/requires.txt
+[19.791s] writing top-level names to localization.egg-info/top_level.txt
+[19.851s] reading manifest file 'localization.egg-info/SOURCES.txt'
+[19.903s] writing manifest file 'localization.egg-info/SOURCES.txt'
+[19.989s] running build_ext
+[19.993s] Creating /workspace/install/localization/lib/python3.10/site-packages/localization.egg-link (link to .)
+[20.012s] Installing apriltag_node script to /workspace/install/localization/lib/localization
+[20.156s] Installing localization_node script to /workspace/install/localization/lib/localization
+[20.245s] 
+[20.282s] Installed /workspace/build/localization
+[20.311s] running symlink_data
+[20.780s] Invoked command in '/workspace/build/localization' returned '0': PYTHONPATH=/workspace/build/localization/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/install/localization/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /workspace/build/localization/build --no-deps symlink_data

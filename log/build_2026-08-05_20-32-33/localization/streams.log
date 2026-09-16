@@ -1,0 +1,21 @@
+[14.750s] Invoking command in '/workspace/build/localization': PYTHONPATH=/workspace/build/localization/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/install/localization/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /workspace/build/localization/build --no-deps symlink_data --force
+[18.349s] running develop
+[20.054s] running egg_info
+[20.060s] writing localization.egg-info/PKG-INFO
+[20.131s] writing dependency_links to localization.egg-info/dependency_links.txt
+[20.144s] writing entry points to localization.egg-info/entry_points.txt
+[20.145s] writing requirements to localization.egg-info/requires.txt
+[20.147s] writing top-level names to localization.egg-info/top_level.txt
+[20.253s] reading manifest file 'localization.egg-info/SOURCES.txt'
+[20.259s] writing manifest file 'localization.egg-info/SOURCES.txt'
+[20.269s] running build_ext
+[20.271s] Creating /workspace/install/localization/lib/python3.10/site-packages/localization.egg-link (link to .)
+[20.272s] Installing apriltag_node script to /workspace/install/localization/lib/localization
+[20.273s] Installing localization_node script to /workspace/install/localization/lib/localization
+[20.274s] 
+[20.323s] Installed /workspace/build/localization
+[20.326s] running symlink_data
+[20.327s] symbolically linking /workspace/build/localization/resource/localization -> /workspace/install/localization/share/ament_index/resource_index/packages
+[20.330s] symbolically linking /workspace/build/localization/package.xml -> /workspace/install/localization/share/localization
+[20.335s] symbolically linking /workspace/build/localization/launch/localization_bringup.launch.py -> /workspace/install/localization/share/localization/launch
+[20.605s] Invoked command in '/workspace/build/localization' returned '0': PYTHONPATH=/workspace/build/localization/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/install/localization/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /workspace/build/localization/build --no-deps symlink_data --force

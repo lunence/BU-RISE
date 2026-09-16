@@ -1,5 +1,5 @@
 import torch
-from config import WIDTH, HEIGHT, CENTER_CORRECT_RANGE
+from backbone_model.util.config import WIDTH, HEIGHT, CENTER_CORRECT_RANGE
 
 def eval(model, data_loader_test, device):
     # evaluation loop

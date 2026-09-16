@@ -2,19 +2,25 @@ import os
 import torch
 import cv2
 import re
-from config import WIDTH, HEIGHT
-from util.files import crop_to_ratio
+from backbone_model.util.config import WIDTH, HEIGHT
+from backbone_model.util.utils import crop_to_ratio
+
+def natural_key(filename):
+    return [
+        int(text) if text.isdigit() else text
+        for text in re.split(r"(\d+)", filename)
+    ]
 
 class Dataset(torch.utils.data.Dataset):
     def __init__(self, root_dir: str, ground_truth: list[dict], transform=None):
         self.root_dir = root_dir
         self.ground_truth = ground_truth
         self.transform = transform
+
         self.image_files = sorted(
-            (f for f in os.listdir(root_dir) if f.endswith((".png", ".jpg"))),
-            key=lambda filename: int(
-                re.search(r"(\d+)(?=\.[^.]+$)", filename).group(1)
-            ),
+            (f for f in os.listdir(root_dir)
+            if f.lower().endswith((".png", ".jpg"))),
+            key=natural_key,
         )
         # print("Images:", len(self.image_files))
         # print("Ground truth:", len(self.ground_truth), len(self.ground_truth))

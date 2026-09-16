@@ -1,0 +1,27 @@
+[8.336s] Invoking command in '/workspace/ros2_ws/build/localization': PYTHONPATH=/workspace/ros2_ws/build/localization/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/ros2_ws/install/localization/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /workspace/ros2_ws/build/localization/build --no-deps symlink_data
+[9.513s] running develop
+[10.204s] running egg_info
+[10.206s] creating localization.egg-info
+[10.209s] writing localization.egg-info/PKG-INFO
+[10.228s] writing dependency_links to localization.egg-info/dependency_links.txt
+[10.235s] writing entry points to localization.egg-info/entry_points.txt
+[10.240s] writing requirements to localization.egg-info/requires.txt
+[10.245s] writing top-level names to localization.egg-info/top_level.txt
+[10.254s] writing manifest file 'localization.egg-info/SOURCES.txt'
+[10.297s] reading manifest file 'localization.egg-info/SOURCES.txt'
+[10.312s] writing manifest file 'localization.egg-info/SOURCES.txt'
+[10.318s] running build_ext
+[10.321s] Creating /workspace/ros2_ws/install/localization/lib/python3.10/site-packages/localization.egg-link (link to .)
+[10.333s] Installing apriltag_node script to /workspace/ros2_ws/install/localization/lib/localization
+[10.339s] Installing localization_node script to /workspace/ros2_ws/install/localization/lib/localization
+[10.347s] 
+[10.350s] Installed /workspace/ros2_ws/build/localization
+[10.352s] running symlink_data
+[10.355s] creating /workspace/ros2_ws/install/localization/share/ament_index
+[10.358s] creating /workspace/ros2_ws/install/localization/share/ament_index/resource_index
+[10.362s] creating /workspace/ros2_ws/install/localization/share/ament_index/resource_index/packages
+[10.371s] symbolically linking /workspace/ros2_ws/build/localization/resource/localization -> /workspace/ros2_ws/install/localization/share/ament_index/resource_index/packages
+[10.374s] symbolically linking /workspace/ros2_ws/build/localization/package.xml -> /workspace/ros2_ws/install/localization/share/localization
+[10.376s] creating /workspace/ros2_ws/install/localization/share/localization/launch
+[10.381s] symbolically linking /workspace/ros2_ws/build/localization/launch/localization_bringup.launch.py -> /workspace/ros2_ws/install/localization/share/localization/launch
+[10.599s] Invoked command in '/workspace/ros2_ws/build/localization' returned '0': PYTHONPATH=/workspace/ros2_ws/build/localization/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/ros2_ws/install/localization/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /workspace/ros2_ws/build/localization/build --no-deps symlink_data

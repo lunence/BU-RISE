@@ -1,0 +1,262 @@
+[0.000000] (-) TimerEvent: {}
+[0.052007] (localization) JobQueued: {'identifier': 'localization', 'dependencies': OrderedDict()}
+[0.052464] (-) TimerEvent: {}
+[0.068805] (pure_pursuit) JobQueued: {'identifier': 'pure_pursuit', 'dependencies': OrderedDict()}
+[0.111831] (robot_sim) JobQueued: {'identifier': 'robot_sim', 'dependencies': OrderedDict()}
+[0.112250] (localization) JobStarted: {'identifier': 'localization'}
+[0.153008] (-) TimerEvent: {}
+[0.264225] (-) TimerEvent: {}
+[0.291236] (pure_pursuit) JobStarted: {'identifier': 'pure_pursuit'}
+[0.392078] (-) TimerEvent: {}
+[0.502154] (-) TimerEvent: {}
+[0.557314] (robot_sim) JobStarted: {'identifier': 'robot_sim'}
+[0.603095] (-) TimerEvent: {}
+[0.800045] (-) TimerEvent: {}
+[0.916120] (-) TimerEvent: {}
+[1.054114] (-) TimerEvent: {}
+[1.174545] (-) TimerEvent: {}
+[1.282861] (-) TimerEvent: {}
+[1.384035] (-) TimerEvent: {}
+[1.489113] (-) TimerEvent: {}
+[1.629255] (-) TimerEvent: {}
+[1.731457] (-) TimerEvent: {}
+[1.839171] (-) TimerEvent: {}
+[1.941697] (-) TimerEvent: {}
+[2.047743] (-) TimerEvent: {}
+[2.181651] (-) TimerEvent: {}
+[2.283121] (-) TimerEvent: {}
+[2.384105] (-) TimerEvent: {}
+[2.485172] (-) TimerEvent: {}
+[2.589476] (-) TimerEvent: {}
+[2.697789] (-) TimerEvent: {}
+[2.798827] (-) TimerEvent: {}
+[2.915939] (-) TimerEvent: {}
+[3.018155] (-) TimerEvent: {}
+[3.127853] (-) TimerEvent: {}
+[3.229223] (-) TimerEvent: {}
+[3.331669] (-) TimerEvent: {}
+[3.436203] (-) TimerEvent: {}
+[3.543107] (-) TimerEvent: {}
+[3.644156] (-) TimerEvent: {}
+[3.749141] (-) TimerEvent: {}
+[3.852727] (-) TimerEvent: {}
+[3.996098] (-) TimerEvent: {}
+[4.106064] (-) TimerEvent: {}
+[4.235102] (-) TimerEvent: {}
+[4.340220] (-) TimerEvent: {}
+[4.452131] (-) TimerEvent: {}
+[4.560183] (-) TimerEvent: {}
+[4.677743] (-) TimerEvent: {}
+[4.781069] (-) TimerEvent: {}
+[4.891598] (-) TimerEvent: {}
+[4.993634] (-) TimerEvent: {}
+[5.095331] (-) TimerEvent: {}
+[5.204121] (-) TimerEvent: {}
+[5.305110] (-) TimerEvent: {}
+[5.407451] (-) TimerEvent: {}
+[5.533121] (-) TimerEvent: {}
+[5.637217] (-) TimerEvent: {}
+[5.741733] (-) TimerEvent: {}
+[5.843270] (-) TimerEvent: {}
+[5.947173] (-) TimerEvent: {}
+[6.052313] (-) TimerEvent: {}
+[6.158189] (-) TimerEvent: {}
+[6.279252] (-) TimerEvent: {}
+[6.398134] (-) TimerEvent: {}
+[6.512215] (-) TimerEvent: {}
+[6.620626] (-) TimerEvent: {}
+[6.728125] (-) TimerEvent: {}
+[6.833156] (-) TimerEvent: {}
+[6.938419] (-) TimerEvent: {}
+[7.068143] (-) TimerEvent: {}
+[7.172210] (-) TimerEvent: {}
+[7.286855] (-) TimerEvent: {}
+[7.434661] (-) TimerEvent: {}
+[7.536225] (-) TimerEvent: {}
+[7.640090] (-) TimerEvent: {}
+[7.773129] (-) TimerEvent: {}
+[7.877160] (-) TimerEvent: {}
+[7.982450] (-) TimerEvent: {}
+[8.088510] (-) TimerEvent: {}
+[8.196631] (-) TimerEvent: {}
+[8.299168] (-) TimerEvent: {}
+[8.400558] (-) TimerEvent: {}
+[8.509459] (-) TimerEvent: {}
+[8.616534] (-) TimerEvent: {}
+[8.772447] (-) TimerEvent: {}
+[8.898145] (-) TimerEvent: {}
+[8.999207] (-) TimerEvent: {}
+[9.100202] (-) TimerEvent: {}
+[9.206476] (-) TimerEvent: {}
+[9.316704] (-) TimerEvent: {}
+[9.440446] (-) TimerEvent: {}
+[9.583111] (-) TimerEvent: {}
+[9.769250] (-) TimerEvent: {}
+[9.895124] (-) TimerEvent: {}
+[10.018087] (-) TimerEvent: {}
+[10.119280] (-) TimerEvent: {}
+[10.235262] (-) TimerEvent: {}
+[10.341302] (-) TimerEvent: {}
+[10.450150] (-) TimerEvent: {}
+[10.562656] (-) TimerEvent: {}
+[10.666344] (-) TimerEvent: {}
+[10.780331] (-) TimerEvent: {}
+[10.915410] (-) TimerEvent: {}
+[11.019311] (-) TimerEvent: {}
+[11.126685] (-) TimerEvent: {}
+[11.257481] (-) TimerEvent: {}
+[11.368195] (-) TimerEvent: {}
+[11.478498] (-) TimerEvent: {}
+[11.594138] (-) TimerEvent: {}
+[11.722376] (-) TimerEvent: {}
+[11.881060] (-) TimerEvent: {}
+[11.996323] (-) TimerEvent: {}
+[12.097668] (-) TimerEvent: {}
+[12.272136] (-) TimerEvent: {}
+[12.389224] (-) TimerEvent: {}
+[12.513284] (-) TimerEvent: {}
+[12.655767] (-) TimerEvent: {}
+[12.759154] (-) TimerEvent: {}
+[12.867024] (-) TimerEvent: {}
+[13.030461] (-) TimerEvent: {}
+[13.176068] (-) TimerEvent: {}
+[13.279221] (-) TimerEvent: {}
+[13.390439] (-) TimerEvent: {}
+[13.506939] (-) TimerEvent: {}
+[13.617283] (-) TimerEvent: {}
+[13.726853] (-) TimerEvent: {}
+[13.851444] (-) TimerEvent: {}
+[13.985759] (-) TimerEvent: {}
+[14.098573] (-) TimerEvent: {}
+[14.206553] (-) TimerEvent: {}
+[14.309449] (-) TimerEvent: {}
+[14.433332] (-) TimerEvent: {}
+[14.537335] (-) TimerEvent: {}
+[14.689817] (-) TimerEvent: {}
+[14.786902] (localization) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'develop', '--editable', '--build-directory', '/workspace/build/localization/build', '--no-deps', 'symlink_data', '--force'], 'cwd': '/workspace/build/localization', 'env': {'PYTHON_BASIC_REPL': '1', 'HOSTNAME': 'dd31ac707175', 'GIT_ASKPASS': '/vscode/vscode-server/bin/linux-x64/e4c7e7b1d6d060162f4aa7f8225271b67ce1df75/extensions/git/dist/askpass.sh', 'SHLVL': '2', 'LD_LIBRARY_PATH': '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib', 'BROWSER': '/vscode/vscode-server/bin/linux-x64/e4c7e7b1d6d060162f4aa7f8225271b67ce1df75/bin/helpers/browser.sh', 'HOME': '/root', 'TERM_PROGRAM_VERSION': '1.131.0', 'VSCODE_IPC_HOOK_CLI': '/tmp/vscode-ipc-6c2b0fad-2304-4d10-be7a-70b4d52bd4ba.sock', 'ROS_PYTHON_VERSION': '3', 'VSCODE_GIT_ASKPASS_MAIN': '/vscode/vscode-server/bin/linux-x64/e4c7e7b1d6d060162f4aa7f8225271b67ce1df75/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/vscode/vscode-server/bin/linux-x64/e4c7e7b1d6d060162f4aa7f8225271b67ce1df75/node', 'PYDEVD_DISABLE_FILE_VALIDATION': '1', 'BUNDLED_DEBUGPY_PATH': '/root/.vscode-server/extensions/ms-python.debugpy-2026.6.0-linux-x64/bundled/libs/debugpy', 'VSCODE_PYTHON_AUTOACTIVATE_GUARD': '1', 'COLORTERM': 'truecolor', 'REMOTE_CONTAINERS': 'true', 'COLCON_PREFIX_PATH': '/workspace/install', 'ROS_DISTRO': 'humble', 'REMOTE_CONTAINERS_IPC': '/tmp/vscode-remote-containers-ipc-dae87d57-aa5b-440e-85c0-dcc109a66627.sock', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm-256color', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/vscode/vscode-server/bin/linux-x64/e4c7e7b1d6d060162f4aa7f8225271b67ce1df75/bin/remote-cli:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/root/.vscode-server/extensions/ms-python.debugpy-2026.6.0-linux-x64/bundled/scripts/noConfigScripts', 'REMOTE_CONTAINERS_SOCKETS': '["/tmp/vscode-ssh-auth-dae87d57-aa5b-440e-85c0-dcc109a66627.sock"]', 'VSCODE_DEBUGPY_ADAPTER_ENDPOINTS': '/root/.vscode-server/extensions/ms-python.debugpy-2026.6.0-linux-x64/.noConfigDebugAdapterEndpoints/endpoint-7b011e0d77a63499.txt', 'LANG': 'C.UTF-8', 'PYTHONSTARTUP': '/root/.vscode-server/data/User/workspaceStorage/01cb09c21d1cd54756446af4140b33e0/ms-python.python/pythonrc.py', 'RMW_IMPLEMENTATION': 'rmw_cyclonedds_cpp', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'VSCODE_GIT_IPC_HANDLE': '/tmp/vscode-git-0a2606e695.sock', 'TERM_PROGRAM': 'vscode', 'SSH_AUTH_SOCK': '/tmp/vscode-ssh-auth-dae87d57-aa5b-440e-85c0-dcc109a66627.sock', 'ROS_DOMAIN_ID': '0', 'AMENT_PREFIX_PATH': '/workspace/install/robot_sim:/workspace/install/pure_pursuit:/workspace/install/localization:/workspace/install/launch:/opt/ros/humble', 'SHELL': '/bin/bash', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'PWD': '/workspace/build/localization', 'LC_ALL': 'C.UTF-8', 'PYTHONPATH': '/workspace/build/localization/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/install/localization/lib/python3.10/site-packages:/workspace/build/robot_sim:/workspace/build/pure_pursuit:/workspace/build/localization:/workspace/install/robot_sim/lib/python3.10/site-packages:/workspace/install/pure_pursuit/lib/python3.10/site-packages:/workspace/install/localization/lib/python3.10/site-packages:/workspace/install/launch/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1'}, 'shell': False}
+[14.917942] (-) TimerEvent: {}
+[15.030022] (robot_sim) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'develop', '--editable', '--build-directory', '/workspace/build/robot_sim/build', '--no-deps', 'symlink_data', '--force'], 'cwd': '/workspace/build/robot_sim', 'env': {'PYTHON_BASIC_REPL': '1', 'HOSTNAME': 'dd31ac707175', 'GIT_ASKPASS': '/vscode/vscode-server/bin/linux-x64/e4c7e7b1d6d060162f4aa7f8225271b67ce1df75/extensions/git/dist/askpass.sh', 'SHLVL': '2', 'LD_LIBRARY_PATH': '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib', 'BROWSER': '/vscode/vscode-server/bin/linux-x64/e4c7e7b1d6d060162f4aa7f8225271b67ce1df75/bin/helpers/browser.sh', 'HOME': '/root', 'TERM_PROGRAM_VERSION': '1.131.0', 'VSCODE_IPC_HOOK_CLI': '/tmp/vscode-ipc-6c2b0fad-2304-4d10-be7a-70b4d52bd4ba.sock', 'ROS_PYTHON_VERSION': '3', 'VSCODE_GIT_ASKPASS_MAIN': '/vscode/vscode-server/bin/linux-x64/e4c7e7b1d6d060162f4aa7f8225271b67ce1df75/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/vscode/vscode-server/bin/linux-x64/e4c7e7b1d6d060162f4aa7f8225271b67ce1df75/node', 'PYDEVD_DISABLE_FILE_VALIDATION': '1', 'BUNDLED_DEBUGPY_PATH': '/root/.vscode-server/extensions/ms-python.debugpy-2026.6.0-linux-x64/bundled/libs/debugpy', 'VSCODE_PYTHON_AUTOACTIVATE_GUARD': '1', 'COLORTERM': 'truecolor', 'REMOTE_CONTAINERS': 'true', 'COLCON_PREFIX_PATH': '/workspace/install', 'ROS_DISTRO': 'humble', 'REMOTE_CONTAINERS_IPC': '/tmp/vscode-remote-containers-ipc-dae87d57-aa5b-440e-85c0-dcc109a66627.sock', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm-256color', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/vscode/vscode-server/bin/linux-x64/e4c7e7b1d6d060162f4aa7f8225271b67ce1df75/bin/remote-cli:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/root/.vscode-server/extensions/ms-python.debugpy-2026.6.0-linux-x64/bundled/scripts/noConfigScripts', 'REMOTE_CONTAINERS_SOCKETS': '["/tmp/vscode-ssh-auth-dae87d57-aa5b-440e-85c0-dcc109a66627.sock"]', 'VSCODE_DEBUGPY_ADAPTER_ENDPOINTS': '/root/.vscode-server/extensions/ms-python.debugpy-2026.6.0-linux-x64/.noConfigDebugAdapterEndpoints/endpoint-7b011e0d77a63499.txt', 'LANG': 'C.UTF-8', 'PYTHONSTARTUP': '/root/.vscode-server/data/User/workspaceStorage/01cb09c21d1cd54756446af4140b33e0/ms-python.python/pythonrc.py', 'RMW_IMPLEMENTATION': 'rmw_cyclonedds_cpp', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'VSCODE_GIT_IPC_HANDLE': '/tmp/vscode-git-0a2606e695.sock', 'TERM_PROGRAM': 'vscode', 'SSH_AUTH_SOCK': '/tmp/vscode-ssh-auth-dae87d57-aa5b-440e-85c0-dcc109a66627.sock', 'ROS_DOMAIN_ID': '0', 'AMENT_PREFIX_PATH': '/workspace/install/robot_sim:/workspace/install/pure_pursuit:/workspace/install/localization:/workspace/install/launch:/opt/ros/humble', 'SHELL': '/bin/bash', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'PWD': '/workspace/build/robot_sim', 'LC_ALL': 'C.UTF-8', 'PYTHONPATH': '/workspace/build/robot_sim/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/install/robot_sim/lib/python3.10/site-packages:/workspace/build/robot_sim:/workspace/build/pure_pursuit:/workspace/build/localization:/workspace/install/robot_sim/lib/python3.10/site-packages:/workspace/install/pure_pursuit/lib/python3.10/site-packages:/workspace/install/localization/lib/python3.10/site-packages:/workspace/install/launch/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1'}, 'shell': False}
+[15.080469] (-) TimerEvent: {}
+[15.197437] (-) TimerEvent: {}
+[15.311402] (-) TimerEvent: {}
+[15.459659] (-) TimerEvent: {}
+[15.609506] (-) TimerEvent: {}
+[15.671778] (pure_pursuit) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'develop', '--editable', '--build-directory', '/workspace/build/pure_pursuit/build', '--no-deps', 'symlink_data', '--force'], 'cwd': '/workspace/build/pure_pursuit', 'env': {'PYTHON_BASIC_REPL': '1', 'HOSTNAME': 'dd31ac707175', 'GIT_ASKPASS': '/vscode/vscode-server/bin/linux-x64/e4c7e7b1d6d060162f4aa7f8225271b67ce1df75/extensions/git/dist/askpass.sh', 'SHLVL': '2', 'LD_LIBRARY_PATH': '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib', 'BROWSER': '/vscode/vscode-server/bin/linux-x64/e4c7e7b1d6d060162f4aa7f8225271b67ce1df75/bin/helpers/browser.sh', 'HOME': '/root', 'TERM_PROGRAM_VERSION': '1.131.0', 'VSCODE_IPC_HOOK_CLI': '/tmp/vscode-ipc-6c2b0fad-2304-4d10-be7a-70b4d52bd4ba.sock', 'ROS_PYTHON_VERSION': '3', 'VSCODE_GIT_ASKPASS_MAIN': '/vscode/vscode-server/bin/linux-x64/e4c7e7b1d6d060162f4aa7f8225271b67ce1df75/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/vscode/vscode-server/bin/linux-x64/e4c7e7b1d6d060162f4aa7f8225271b67ce1df75/node', 'PYDEVD_DISABLE_FILE_VALIDATION': '1', 'BUNDLED_DEBUGPY_PATH': '/root/.vscode-server/extensions/ms-python.debugpy-2026.6.0-linux-x64/bundled/libs/debugpy', 'VSCODE_PYTHON_AUTOACTIVATE_GUARD': '1', 'COLORTERM': 'truecolor', 'REMOTE_CONTAINERS': 'true', 'COLCON_PREFIX_PATH': '/workspace/install', 'ROS_DISTRO': 'humble', 'REMOTE_CONTAINERS_IPC': '/tmp/vscode-remote-containers-ipc-dae87d57-aa5b-440e-85c0-dcc109a66627.sock', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm-256color', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/vscode/vscode-server/bin/linux-x64/e4c7e7b1d6d060162f4aa7f8225271b67ce1df75/bin/remote-cli:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/root/.vscode-server/extensions/ms-python.debugpy-2026.6.0-linux-x64/bundled/scripts/noConfigScripts', 'REMOTE_CONTAINERS_SOCKETS': '["/tmp/vscode-ssh-auth-dae87d57-aa5b-440e-85c0-dcc109a66627.sock"]', 'VSCODE_DEBUGPY_ADAPTER_ENDPOINTS': '/root/.vscode-server/extensions/ms-python.debugpy-2026.6.0-linux-x64/.noConfigDebugAdapterEndpoints/endpoint-7b011e0d77a63499.txt', 'LANG': 'C.UTF-8', 'PYTHONSTARTUP': '/root/.vscode-server/data/User/workspaceStorage/01cb09c21d1cd54756446af4140b33e0/ms-python.python/pythonrc.py', 'RMW_IMPLEMENTATION': 'rmw_cyclonedds_cpp', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'VSCODE_GIT_IPC_HANDLE': '/tmp/vscode-git-0a2606e695.sock', 'TERM_PROGRAM': 'vscode', 'SSH_AUTH_SOCK': '/tmp/vscode-ssh-auth-dae87d57-aa5b-440e-85c0-dcc109a66627.sock', 'ROS_DOMAIN_ID': '0', 'AMENT_PREFIX_PATH': '/workspace/install/robot_sim:/workspace/install/pure_pursuit:/workspace/install/localization:/workspace/install/launch:/opt/ros/humble', 'SHELL': '/bin/bash', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'PWD': '/workspace/build/pure_pursuit', 'LC_ALL': 'C.UTF-8', 'PYTHONPATH': '/workspace/build/pure_pursuit/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/install/pure_pursuit/lib/python3.10/site-packages:/workspace/build/robot_sim:/workspace/build/pure_pursuit:/workspace/build/localization:/workspace/install/robot_sim/lib/python3.10/site-packages:/workspace/install/pure_pursuit/lib/python3.10/site-packages:/workspace/install/localization/lib/python3.10/site-packages:/workspace/install/launch/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1'}, 'shell': False}
+[15.835693] (-) TimerEvent: {}
+[15.937424] (-) TimerEvent: {}
+[16.090053] (-) TimerEvent: {}
+[16.195102] (-) TimerEvent: {}
+[16.303586] (-) TimerEvent: {}
+[16.427316] (-) TimerEvent: {}
+[16.529323] (-) TimerEvent: {}
+[16.705726] (-) TimerEvent: {}
+[16.914869] (-) TimerEvent: {}
+[17.102623] (-) TimerEvent: {}
+[17.205560] (-) TimerEvent: {}
+[17.308572] (-) TimerEvent: {}
+[17.414095] (-) TimerEvent: {}
+[17.527872] (-) TimerEvent: {}
+[17.634888] (-) TimerEvent: {}
+[17.769163] (-) TimerEvent: {}
+[18.014951] (-) TimerEvent: {}
+[18.370421] (-) TimerEvent: {}
+[18.466505] (localization) StdoutLine: {'line': b'running develop\n'}
+[18.504206] (-) TimerEvent: {}
+[18.606495] (-) TimerEvent: {}
+[18.761377] (-) TimerEvent: {}
+[18.870574] (-) TimerEvent: {}
+[18.993750] (-) TimerEvent: {}
+[18.997584] (robot_sim) StdoutLine: {'line': b'running develop\n'}
+[19.094043] (-) TimerEvent: {}
+[19.198216] (-) TimerEvent: {}
+[19.309355] (-) TimerEvent: {}
+[19.412246] (-) TimerEvent: {}
+[19.498157] (pure_pursuit) StdoutLine: {'line': b'running develop\n'}
+[19.521291] (-) TimerEvent: {}
+[19.623096] (-) TimerEvent: {}
+[19.734098] (-) TimerEvent: {}
+[19.847708] (-) TimerEvent: {}
+[20.005686] (-) TimerEvent: {}
+[20.150844] (localization) StdoutLine: {'line': b'running egg_info\n'}
+[20.179485] (-) TimerEvent: {}
+[20.180706] (localization) StdoutLine: {'line': b'writing localization.egg-info/PKG-INFO\n'}
+[20.190523] (localization) StdoutLine: {'line': b'writing dependency_links to localization.egg-info/dependency_links.txt\n'}
+[20.262637] (localization) StdoutLine: {'line': b'writing entry points to localization.egg-info/entry_points.txt\n'}
+[20.269147] (localization) StdoutLine: {'line': b'writing requirements to localization.egg-info/requires.txt\n'}
+[20.270535] (localization) StdoutLine: {'line': b'writing top-level names to localization.egg-info/top_level.txt\n'}
+[20.280090] (-) TimerEvent: {}
+[20.350280] (localization) StdoutLine: {'line': b"reading manifest file 'localization.egg-info/SOURCES.txt'\n"}
+[20.380869] (-) TimerEvent: {}
+[20.382526] (localization) StdoutLine: {'line': b"writing manifest file 'localization.egg-info/SOURCES.txt'\n"}
+[20.390188] (localization) StdoutLine: {'line': b'running build_ext\n'}
+[20.394594] (localization) StdoutLine: {'line': b'Creating /workspace/install/localization/lib/python3.10/site-packages/localization.egg-link (link to .)\n'}
+[20.395953] (localization) StdoutLine: {'line': b'Installing apriltag_node script to /workspace/install/localization/lib/localization\n'}
+[20.396912] (localization) StdoutLine: {'line': b'Installing localization_node script to /workspace/install/localization/lib/localization\n'}
+[20.398019] (localization) StdoutLine: {'line': b'\n'}
+[20.404223] (localization) StdoutLine: {'line': b'Installed /workspace/build/localization\n'}
+[20.448682] (localization) StdoutLine: {'line': b'running symlink_data\n'}
+[20.451085] (localization) StdoutLine: {'line': b'symbolically linking /workspace/build/localization/resource/localization -> /workspace/install/localization/share/ament_index/resource_index/packages\n'}
+[20.452703] (localization) StdoutLine: {'line': b'symbolically linking /workspace/build/localization/package.xml -> /workspace/install/localization/share/localization\n'}
+[20.454897] (localization) StdoutLine: {'line': b'symbolically linking /workspace/build/localization/launch/localization_bringup.launch.py -> /workspace/install/localization/share/localization/launch\n'}
+[20.482150] (-) TimerEvent: {}
+[20.588422] (-) TimerEvent: {}
+[20.690120] (-) TimerEvent: {}
+[20.718439] (localization) CommandEnded: {'returncode': 0}
+[20.733801] (robot_sim) StdoutLine: {'line': b'running egg_info\n'}
+[20.736106] (robot_sim) StdoutLine: {'line': b'writing robot_sim.egg-info/PKG-INFO\n'}
+[20.739188] (robot_sim) StdoutLine: {'line': b'writing dependency_links to robot_sim.egg-info/dependency_links.txt\n'}
+[20.741942] (robot_sim) StdoutLine: {'line': b'writing entry points to robot_sim.egg-info/entry_points.txt\n'}
+[20.840542] (-) TimerEvent: {}
+[20.855932] (robot_sim) StdoutLine: {'line': b'writing requirements to robot_sim.egg-info/requires.txt\n'}
+[20.871293] (robot_sim) StdoutLine: {'line': b'writing top-level names to robot_sim.egg-info/top_level.txt\n'}
+[20.939178] (robot_sim) StdoutLine: {'line': b"reading manifest file 'robot_sim.egg-info/SOURCES.txt'\n"}
+[20.941807] (-) TimerEvent: {}
+[21.013406] (robot_sim) StdoutLine: {'line': b"writing manifest file 'robot_sim.egg-info/SOURCES.txt'\n"}
+[21.033930] (robot_sim) StdoutLine: {'line': b'running build_ext\n'}
+[21.040089] (robot_sim) StdoutLine: {'line': b'Creating /workspace/install/robot_sim/lib/python3.10/site-packages/robot-sim.egg-link (link to .)\n'}
+[21.049453] (-) TimerEvent: {}
+[21.082528] (robot_sim) StdoutLine: {'line': b'Installing simulator script to /workspace/install/robot_sim/lib/robot_sim\n'}
+[21.099412] (robot_sim) StdoutLine: {'line': b'\n'}
+[21.341437] (-) TimerEvent: {}
+[21.360574] (robot_sim) StdoutLine: {'line': b'Installed /workspace/build/robot_sim\n'}
+[21.371223] (robot_sim) StdoutLine: {'line': b'running symlink_data\n'}
+[21.379907] (robot_sim) StdoutLine: {'line': b'symbolically linking /workspace/build/robot_sim/resource/robot_sim -> /workspace/install/robot_sim/share/ament_index/resource_index/packages\n'}
+[21.385487] (robot_sim) StdoutLine: {'line': b'symbolically linking /workspace/build/robot_sim/package.xml -> /workspace/install/robot_sim/share/robot_sim\n'}
+[21.418830] (localization) JobEnded: {'identifier': 'localization', 'rc': 0}
+[21.486508] (-) TimerEvent: {}
+[21.488729] (robot_sim) CommandEnded: {'returncode': 0}
+[21.595222] (-) TimerEvent: {}
+[21.796457] (-) TimerEvent: {}
+[21.849472] (pure_pursuit) StdoutLine: {'line': b'running egg_info\n'}
+[21.883792] (pure_pursuit) StdoutLine: {'line': b'writing pure_pursuit.egg-info/PKG-INFO\n'}
+[21.914962] (-) TimerEvent: {}
+[21.915855] (pure_pursuit) StdoutLine: {'line': b'writing dependency_links to pure_pursuit.egg-info/dependency_links.txt\n'}
+[21.923048] (pure_pursuit) StdoutLine: {'line': b'writing entry points to pure_pursuit.egg-info/entry_points.txt\n'}
+[21.928678] (pure_pursuit) StdoutLine: {'line': b'writing requirements to pure_pursuit.egg-info/requires.txt\n'}
+[21.941884] (pure_pursuit) StdoutLine: {'line': b'writing top-level names to pure_pursuit.egg-info/top_level.txt\n'}
+[22.033045] (-) TimerEvent: {}
+[22.167428] (-) TimerEvent: {}
+[22.265274] (pure_pursuit) StdoutLine: {'line': b"reading manifest file 'pure_pursuit.egg-info/SOURCES.txt'\n"}
+[22.269245] (-) TimerEvent: {}
+[22.371172] (-) TimerEvent: {}
+[22.400279] (robot_sim) JobEnded: {'identifier': 'robot_sim', 'rc': 0}
+[22.771159] (-) TimerEvent: {}
+[22.774463] (pure_pursuit) StdoutLine: {'line': b"writing manifest file 'pure_pursuit.egg-info/SOURCES.txt'\n"}
+[22.777239] (pure_pursuit) StdoutLine: {'line': b'running build_ext\n'}
+[22.780639] (pure_pursuit) StdoutLine: {'line': b'Creating /workspace/install/pure_pursuit/lib/python3.10/site-packages/pure-pursuit.egg-link (link to .)\n'}
+[22.792485] (pure_pursuit) StdoutLine: {'line': b'Installing pure_pursuit_node script to /workspace/install/pure_pursuit/lib/pure_pursuit\n'}
+[22.866260] (pure_pursuit) StdoutLine: {'line': b'\n'}
+[22.875389] (-) TimerEvent: {}
+[22.876267] (pure_pursuit) StdoutLine: {'line': b'Installed /workspace/build/pure_pursuit\n'}
+[22.878342] (pure_pursuit) StdoutLine: {'line': b'running symlink_data\n'}
+[22.881813] (pure_pursuit) StdoutLine: {'line': b'symbolically linking /workspace/build/pure_pursuit/resource/pure_pursuit -> /workspace/install/pure_pursuit/share/ament_index/resource_index/packages\n'}
+[22.909313] (pure_pursuit) StdoutLine: {'line': b'symbolically linking /workspace/build/pure_pursuit/package.xml -> /workspace/install/pure_pursuit/share/pure_pursuit\n'}
+[22.986421] (-) TimerEvent: {}
+[23.122093] (-) TimerEvent: {}
+[23.233376] (pure_pursuit) CommandEnded: {'returncode': 0}
+[23.301846] (-) TimerEvent: {}
+[23.418523] (-) TimerEvent: {}
+[23.520152] (-) TimerEvent: {}
+[23.622197] (-) TimerEvent: {}
+[23.636433] (pure_pursuit) JobEnded: {'identifier': 'pure_pursuit', 'rc': 0}
+[23.644195] (-) EventReactorShutdown: {}

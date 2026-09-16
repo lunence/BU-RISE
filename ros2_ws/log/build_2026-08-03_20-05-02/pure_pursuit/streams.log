@@ -1,0 +1,24 @@
+[7.685s] Invoking command in '/workspace/ros2_ws/build/pure_pursuit': PYTHONPATH=/workspace/ros2_ws/build/pure_pursuit/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/ros2_ws/install/pure_pursuit/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /workspace/ros2_ws/build/pure_pursuit/build --no-deps symlink_data
+[8.867s] running develop
+[9.532s] running egg_info
+[9.536s] creating pure_pursuit.egg-info
+[9.538s] writing pure_pursuit.egg-info/PKG-INFO
+[9.546s] writing dependency_links to pure_pursuit.egg-info/dependency_links.txt
+[9.551s] writing entry points to pure_pursuit.egg-info/entry_points.txt
+[9.567s] writing requirements to pure_pursuit.egg-info/requires.txt
+[9.577s] writing top-level names to pure_pursuit.egg-info/top_level.txt
+[9.581s] writing manifest file 'pure_pursuit.egg-info/SOURCES.txt'
+[9.603s] reading manifest file 'pure_pursuit.egg-info/SOURCES.txt'
+[9.614s] writing manifest file 'pure_pursuit.egg-info/SOURCES.txt'
+[9.619s] running build_ext
+[9.621s] Creating /workspace/ros2_ws/install/pure_pursuit/lib/python3.10/site-packages/pure-pursuit.egg-link (link to .)
+[9.634s] Installing pure_pursuit_node script to /workspace/ros2_ws/install/pure_pursuit/lib/pure_pursuit
+[9.646s] 
+[9.650s] Installed /workspace/ros2_ws/build/pure_pursuit
+[9.653s] running symlink_data
+[9.656s] creating /workspace/ros2_ws/install/pure_pursuit/share/ament_index
+[9.659s] creating /workspace/ros2_ws/install/pure_pursuit/share/ament_index/resource_index
+[9.664s] creating /workspace/ros2_ws/install/pure_pursuit/share/ament_index/resource_index/packages
+[9.672s] symbolically linking /workspace/ros2_ws/build/pure_pursuit/resource/pure_pursuit -> /workspace/ros2_ws/install/pure_pursuit/share/ament_index/resource_index/packages
+[9.678s] symbolically linking /workspace/ros2_ws/build/pure_pursuit/package.xml -> /workspace/ros2_ws/install/pure_pursuit/share/pure_pursuit
+[9.877s] Invoked command in '/workspace/ros2_ws/build/pure_pursuit' returned '0': PYTHONPATH=/workspace/ros2_ws/build/pure_pursuit/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/ros2_ws/install/pure_pursuit/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /workspace/ros2_ws/build/pure_pursuit/build --no-deps symlink_data

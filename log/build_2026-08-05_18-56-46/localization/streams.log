@@ -1,0 +1,26 @@
+[4.379s] Invoking command in '/workspace/ros2_ws/src/localization': PYTHONPATH=/workspace/build/localization/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/install/localization/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/localization build --build-base /workspace/build/localization/build install --record /workspace/build/localization/install.log --install-scripts $base/lib/localization --single-version-externally-managed install_data
+[5.254s] running egg_info
+[5.261s] writing ../../../build/localization/localization.egg-info/PKG-INFO
+[5.263s] writing dependency_links to ../../../build/localization/localization.egg-info/dependency_links.txt
+[5.267s] writing entry points to ../../../build/localization/localization.egg-info/entry_points.txt
+[5.272s] writing requirements to ../../../build/localization/localization.egg-info/requires.txt
+[5.277s] writing top-level names to ../../../build/localization/localization.egg-info/top_level.txt
+[5.298s] reading manifest file '../../../build/localization/localization.egg-info/SOURCES.txt'
+[5.308s] adding license file 'LICENSE'
+[5.315s] writing manifest file '../../../build/localization/localization.egg-info/SOURCES.txt'
+[5.322s] running build
+[5.325s] running build_py
+[5.326s] copying localization/detector.py -> /workspace/build/localization/build/lib/localization
+[5.340s] running install
+[5.350s] running install_lib
+[5.358s] copying /workspace/build/localization/build/lib/localization/detector.py -> /workspace/install/localization/lib/python3.10/site-packages/localization
+[5.527s] byte-compiling /workspace/install/localization/lib/python3.10/site-packages/localization/detector.py to detector.cpython-310.pyc
+[5.532s] running install_data
+[5.537s] running install_egg_info
+[5.539s] removing '/workspace/install/localization/lib/python3.10/site-packages/localization-0.0.0-py3.10.egg-info' (and everything under it)
+[5.544s] Copying ../../../build/localization/localization.egg-info to /workspace/install/localization/lib/python3.10/site-packages/localization-0.0.0-py3.10.egg-info
+[5.597s] running install_scripts
+[5.775s] Installing apriltag_node script to /workspace/install/localization/lib/localization
+[5.780s] Installing localization_node script to /workspace/install/localization/lib/localization
+[5.801s] writing list of installed files to '/workspace/build/localization/install.log'
+[5.953s] Invoked command in '/workspace/ros2_ws/src/localization' returned '0': PYTHONPATH=/workspace/build/localization/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/install/localization/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/localization build --build-base /workspace/build/localization/build install --record /workspace/build/localization/install.log --install-scripts $base/lib/localization --single-version-externally-managed install_data

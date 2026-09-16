@@ -1,0 +1,19 @@
+[15.443s] Invoking command in '/workspace/build/pure_pursuit': PYTHONPATH=/workspace/build/pure_pursuit/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/install/pure_pursuit/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /workspace/build/pure_pursuit/build --no-deps symlink_data --force
+[19.117s] running develop
+[21.486s] running egg_info
+[21.512s] writing pure_pursuit.egg-info/PKG-INFO
+[21.529s] writing dependency_links to pure_pursuit.egg-info/dependency_links.txt
+[21.538s] writing entry points to pure_pursuit.egg-info/entry_points.txt
+[21.550s] writing requirements to pure_pursuit.egg-info/requires.txt
+[21.635s] writing top-level names to pure_pursuit.egg-info/top_level.txt
+[21.877s] reading manifest file 'pure_pursuit.egg-info/SOURCES.txt'
+[22.387s] writing manifest file 'pure_pursuit.egg-info/SOURCES.txt'
+[22.390s] running build_ext
+[22.393s] Creating /workspace/install/pure_pursuit/lib/python3.10/site-packages/pure-pursuit.egg-link (link to .)
+[22.423s] Installing pure_pursuit_node script to /workspace/install/pure_pursuit/lib/pure_pursuit
+[22.485s] 
+[22.488s] Installed /workspace/build/pure_pursuit
+[22.491s] running symlink_data
+[22.516s] symbolically linking /workspace/build/pure_pursuit/resource/pure_pursuit -> /workspace/install/pure_pursuit/share/ament_index/resource_index/packages
+[22.523s] symbolically linking /workspace/build/pure_pursuit/package.xml -> /workspace/install/pure_pursuit/share/pure_pursuit
+[22.907s] Invoked command in '/workspace/build/pure_pursuit' returned '0': PYTHONPATH=/workspace/build/pure_pursuit/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/install/pure_pursuit/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /workspace/build/pure_pursuit/build --no-deps symlink_data --force

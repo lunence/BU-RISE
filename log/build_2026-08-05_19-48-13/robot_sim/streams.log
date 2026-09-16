@@ -1,0 +1,21 @@
+[4.974s] Invoking command in '/workspace/ros2_ws/src/robot_sim': PYTHONPATH=/workspace/build/robot_sim/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/install/robot_sim/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/robot_sim build --build-base /workspace/build/robot_sim/build install --record /workspace/build/robot_sim/install.log --install-scripts $base/lib/robot_sim --single-version-externally-managed install_data
+[6.486s] running egg_info
+[6.489s] writing ../../../build/robot_sim/robot_sim.egg-info/PKG-INFO
+[6.491s] writing dependency_links to ../../../build/robot_sim/robot_sim.egg-info/dependency_links.txt
+[6.492s] writing entry points to ../../../build/robot_sim/robot_sim.egg-info/entry_points.txt
+[6.495s] writing requirements to ../../../build/robot_sim/robot_sim.egg-info/requires.txt
+[6.499s] writing top-level names to ../../../build/robot_sim/robot_sim.egg-info/top_level.txt
+[6.520s] reading manifest file '../../../build/robot_sim/robot_sim.egg-info/SOURCES.txt'
+[6.529s] writing manifest file '../../../build/robot_sim/robot_sim.egg-info/SOURCES.txt'
+[6.532s] running build
+[6.534s] running build_py
+[6.540s] running install
+[6.544s] running install_lib
+[6.549s] running install_data
+[6.555s] running install_egg_info
+[6.559s] removing '/workspace/install/robot_sim/lib/python3.10/site-packages/robot_sim-0.0.0-py3.10.egg-info' (and everything under it)
+[6.572s] Copying ../../../build/robot_sim/robot_sim.egg-info to /workspace/install/robot_sim/lib/python3.10/site-packages/robot_sim-0.0.0-py3.10.egg-info
+[6.652s] running install_scripts
+[6.737s] Installing simulator script to /workspace/install/robot_sim/lib/robot_sim
+[6.747s] writing list of installed files to '/workspace/build/robot_sim/install.log'
+[6.842s] Invoked command in '/workspace/ros2_ws/src/robot_sim' returned '0': PYTHONPATH=/workspace/build/robot_sim/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/install/robot_sim/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/robot_sim build --build-base /workspace/build/robot_sim/build install --record /workspace/build/robot_sim/install.log --install-scripts $base/lib/robot_sim --single-version-externally-managed install_data

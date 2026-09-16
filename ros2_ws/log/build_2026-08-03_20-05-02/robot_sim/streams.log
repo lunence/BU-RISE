@@ -1,0 +1,24 @@
+[7.427s] Invoking command in '/workspace/ros2_ws/build/robot_sim': PYTHONPATH=/workspace/ros2_ws/build/robot_sim/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/ros2_ws/install/robot_sim/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /workspace/ros2_ws/build/robot_sim/build --no-deps symlink_data
+[8.587s] running develop
+[9.241s] running egg_info
+[9.244s] creating robot_sim.egg-info
+[9.246s] writing robot_sim.egg-info/PKG-INFO
+[9.254s] writing dependency_links to robot_sim.egg-info/dependency_links.txt
+[9.261s] writing entry points to robot_sim.egg-info/entry_points.txt
+[9.265s] writing requirements to robot_sim.egg-info/requires.txt
+[9.269s] writing top-level names to robot_sim.egg-info/top_level.txt
+[9.279s] writing manifest file 'robot_sim.egg-info/SOURCES.txt'
+[9.309s] reading manifest file 'robot_sim.egg-info/SOURCES.txt'
+[9.316s] writing manifest file 'robot_sim.egg-info/SOURCES.txt'
+[9.323s] running build_ext
+[9.329s] Creating /workspace/ros2_ws/install/robot_sim/lib/python3.10/site-packages/robot-sim.egg-link (link to .)
+[9.349s] Installing simulator script to /workspace/ros2_ws/install/robot_sim/lib/robot_sim
+[9.362s] 
+[9.367s] Installed /workspace/ros2_ws/build/robot_sim
+[9.371s] running symlink_data
+[9.378s] creating /workspace/ros2_ws/install/robot_sim/share/ament_index
+[9.383s] creating /workspace/ros2_ws/install/robot_sim/share/ament_index/resource_index
+[9.393s] creating /workspace/ros2_ws/install/robot_sim/share/ament_index/resource_index/packages
+[9.395s] symbolically linking /workspace/ros2_ws/build/robot_sim/resource/robot_sim -> /workspace/ros2_ws/install/robot_sim/share/ament_index/resource_index/packages
+[9.398s] symbolically linking /workspace/ros2_ws/build/robot_sim/package.xml -> /workspace/ros2_ws/install/robot_sim/share/robot_sim
+[9.493s] Invoked command in '/workspace/ros2_ws/build/robot_sim' returned '0': PYTHONPATH=/workspace/ros2_ws/build/robot_sim/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/ros2_ws/install/robot_sim/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /workspace/ros2_ws/build/robot_sim/build --no-deps symlink_data

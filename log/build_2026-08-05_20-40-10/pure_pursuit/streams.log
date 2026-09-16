@@ -1,0 +1,17 @@
+[9.378s] Invoking command in '/workspace/build/pure_pursuit': PYTHONPATH=/workspace/build/pure_pursuit/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/install/pure_pursuit/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /workspace/build/pure_pursuit/build --no-deps symlink_data
+[11.050s] running develop
+[12.414s] running egg_info
+[12.422s] writing pure_pursuit.egg-info/PKG-INFO
+[12.428s] writing dependency_links to pure_pursuit.egg-info/dependency_links.txt
+[12.431s] writing entry points to pure_pursuit.egg-info/entry_points.txt
+[12.437s] writing requirements to pure_pursuit.egg-info/requires.txt
+[12.451s] writing top-level names to pure_pursuit.egg-info/top_level.txt
+[12.489s] reading manifest file 'pure_pursuit.egg-info/SOURCES.txt'
+[12.503s] writing manifest file 'pure_pursuit.egg-info/SOURCES.txt'
+[12.513s] running build_ext
+[12.515s] Creating /workspace/install/pure_pursuit/lib/python3.10/site-packages/pure-pursuit.egg-link (link to .)
+[12.587s] Installing pure_pursuit_node script to /workspace/install/pure_pursuit/lib/pure_pursuit
+[12.597s] 
+[12.598s] Installed /workspace/build/pure_pursuit
+[12.600s] running symlink_data
+[12.749s] Invoked command in '/workspace/build/pure_pursuit' returned '0': PYTHONPATH=/workspace/build/pure_pursuit/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/install/pure_pursuit/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /workspace/build/pure_pursuit/build --no-deps symlink_data

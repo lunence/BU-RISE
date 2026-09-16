@@ -1,0 +1,19 @@
+running develop
+running egg_info
+writing localization.egg-info/PKG-INFO
+writing dependency_links to localization.egg-info/dependency_links.txt
+writing entry points to localization.egg-info/entry_points.txt
+writing requirements to localization.egg-info/requires.txt
+writing top-level names to localization.egg-info/top_level.txt
+reading manifest file 'localization.egg-info/SOURCES.txt'
+writing manifest file 'localization.egg-info/SOURCES.txt'
+running build_ext
+Creating /workspace/install/localization/lib/python3.10/site-packages/localization.egg-link (link to .)
+Installing apriltag_node script to /workspace/install/localization/lib/localization
+Installing localization_node script to /workspace/install/localization/lib/localization
+
+Installed /workspace/build/localization
+running symlink_data
+symbolically linking /workspace/build/localization/resource/localization -> /workspace/install/localization/share/ament_index/resource_index/packages
+symbolically linking /workspace/build/localization/package.xml -> /workspace/install/localization/share/localization
+symbolically linking /workspace/build/localization/launch/localization_bringup.launch.py -> /workspace/install/localization/share/localization/launch

@@ -1,0 +1,13 @@
+package.xml
+setup.cfg
+setup.py
+resource/robot_sim
+robot_sim/__init__.py
+robot_sim/simulator.py
+robot_sim.egg-info/PKG-INFO
+robot_sim.egg-info/SOURCES.txt
+robot_sim.egg-info/dependency_links.txt
+robot_sim.egg-info/entry_points.txt
+robot_sim.egg-info/requires.txt
+robot_sim.egg-info/top_level.txt
+robot_sim.egg-info/zip-safe

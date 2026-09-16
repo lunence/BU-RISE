@@ -1,11 +1,8 @@
 numpy==1.26.4
 matplotlib==3.10.9
-opencv-python==4.13.0.92
+opencv-python==4.10.0.84
 torch==2.12.1
 torchvision==0.27.1
-pillow==12.2.0
-tqdm==4.68.3
-dt-apriltags==3.1.7
-pycocotools==2.0.11
-pandas==2.3.3
+#dt-apriltags==3.1.7
 pupil-apriltags
+requests

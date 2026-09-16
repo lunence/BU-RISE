@@ -1,0 +1,59 @@
+[3.433s] Invoking command in '/workspace/ros2_ws/src/localization': PYTHONPATH=/workspace/ros2_ws/src/localization/build/localization/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/ros2_ws/src/localization/install/localization/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base build/localization build --build-base /workspace/ros2_ws/src/localization/build/localization/build install --record /workspace/ros2_ws/src/localization/build/localization/install.log --install-scripts $base/lib/localization --single-version-externally-managed install_data
+[5.412s] running egg_info
+[5.416s] creating build/localization/localization.egg-info
+[5.422s] writing build/localization/localization.egg-info/PKG-INFO
+[5.425s] writing dependency_links to build/localization/localization.egg-info/dependency_links.txt
+[5.430s] writing entry points to build/localization/localization.egg-info/entry_points.txt
+[5.435s] writing requirements to build/localization/localization.egg-info/requires.txt
+[5.440s] writing top-level names to build/localization/localization.egg-info/top_level.txt
+[5.446s] writing manifest file 'build/localization/localization.egg-info/SOURCES.txt'
+[5.471s] reading manifest file 'build/localization/localization.egg-info/SOURCES.txt'
+[5.478s] adding license file 'LICENSE'
+[5.483s] writing manifest file 'build/localization/localization.egg-info/SOURCES.txt'
+[5.484s] running build
+[5.488s] running build_py
+[5.490s] creating /workspace/ros2_ws/src/localization/build/localization/build
+[5.495s] creating /workspace/ros2_ws/src/localization/build/localization/build/lib
+[5.497s] creating /workspace/ros2_ws/src/localization/build/localization/build/lib/localization
+[5.499s] copying localization/detector.py -> /workspace/ros2_ws/src/localization/build/localization/build/lib/localization
+[5.508s] copying localization/config.py -> /workspace/ros2_ws/src/localization/build/localization/build/lib/localization
+[5.520s] copying localization/localization_node.py -> /workspace/ros2_ws/src/localization/build/localization/build/lib/localization
+[5.527s] copying localization/__init__.py -> /workspace/ros2_ws/src/localization/build/localization/build/lib/localization
+[5.533s] copying localization/apriltag.py -> /workspace/ros2_ws/src/localization/build/localization/build/lib/localization
+[5.542s] copying localization/model.py -> /workspace/ros2_ws/src/localization/build/localization/build/lib/localization
+[5.548s] copying localization/camera.py -> /workspace/ros2_ws/src/localization/build/localization/build/lib/localization
+[5.555s] copying localization/utils.py -> /workspace/ros2_ws/src/localization/build/localization/build/lib/localization
+[5.566s] copying localization/world_frame.py -> /workspace/ros2_ws/src/localization/build/localization/build/lib/localization
+[5.577s] running install
+[5.584s] running install_lib
+[5.589s] creating /workspace/ros2_ws/src/localization/install/localization/lib/python3.10/site-packages/localization
+[5.592s] copying /workspace/ros2_ws/src/localization/build/localization/build/lib/localization/detector.py -> /workspace/ros2_ws/src/localization/install/localization/lib/python3.10/site-packages/localization
+[5.604s] copying /workspace/ros2_ws/src/localization/build/localization/build/lib/localization/config.py -> /workspace/ros2_ws/src/localization/install/localization/lib/python3.10/site-packages/localization
+[5.613s] copying /workspace/ros2_ws/src/localization/build/localization/build/lib/localization/localization_node.py -> /workspace/ros2_ws/src/localization/install/localization/lib/python3.10/site-packages/localization
+[5.622s] copying /workspace/ros2_ws/src/localization/build/localization/build/lib/localization/__init__.py -> /workspace/ros2_ws/src/localization/install/localization/lib/python3.10/site-packages/localization
+[5.630s] copying /workspace/ros2_ws/src/localization/build/localization/build/lib/localization/apriltag.py -> /workspace/ros2_ws/src/localization/install/localization/lib/python3.10/site-packages/localization
+[5.641s] copying /workspace/ros2_ws/src/localization/build/localization/build/lib/localization/model.py -> /workspace/ros2_ws/src/localization/install/localization/lib/python3.10/site-packages/localization
+[5.655s] copying /workspace/ros2_ws/src/localization/build/localization/build/lib/localization/camera.py -> /workspace/ros2_ws/src/localization/install/localization/lib/python3.10/site-packages/localization
+[5.666s] copying /workspace/ros2_ws/src/localization/build/localization/build/lib/localization/utils.py -> /workspace/ros2_ws/src/localization/install/localization/lib/python3.10/site-packages/localization
+[5.674s] copying /workspace/ros2_ws/src/localization/build/localization/build/lib/localization/world_frame.py -> /workspace/ros2_ws/src/localization/install/localization/lib/python3.10/site-packages/localization
+[5.698s] byte-compiling /workspace/ros2_ws/src/localization/install/localization/lib/python3.10/site-packages/localization/detector.py to detector.cpython-310.pyc
+[5.710s] byte-compiling /workspace/ros2_ws/src/localization/install/localization/lib/python3.10/site-packages/localization/config.py to config.cpython-310.pyc
+[5.724s] byte-compiling /workspace/ros2_ws/src/localization/install/localization/lib/python3.10/site-packages/localization/localization_node.py to localization_node.cpython-310.pyc
+[5.733s] byte-compiling /workspace/ros2_ws/src/localization/install/localization/lib/python3.10/site-packages/localization/__init__.py to __init__.cpython-310.pyc
+[5.744s] byte-compiling /workspace/ros2_ws/src/localization/install/localization/lib/python3.10/site-packages/localization/apriltag.py to apriltag.cpython-310.pyc
+[5.756s] byte-compiling /workspace/ros2_ws/src/localization/install/localization/lib/python3.10/site-packages/localization/model.py to model.cpython-310.pyc
+[5.764s] byte-compiling /workspace/ros2_ws/src/localization/install/localization/lib/python3.10/site-packages/localization/camera.py to camera.cpython-310.pyc
+[5.774s] byte-compiling /workspace/ros2_ws/src/localization/install/localization/lib/python3.10/site-packages/localization/utils.py to utils.cpython-310.pyc
+[5.784s] byte-compiling /workspace/ros2_ws/src/localization/install/localization/lib/python3.10/site-packages/localization/world_frame.py to world_frame.cpython-310.pyc
+[5.797s] running install_data
+[5.800s] creating /workspace/ros2_ws/src/localization/install/localization/share/ament_index
+[5.803s] creating /workspace/ros2_ws/src/localization/install/localization/share/ament_index/resource_index
+[5.806s] creating /workspace/ros2_ws/src/localization/install/localization/share/ament_index/resource_index/packages
+[5.808s] copying resource/localization -> /workspace/ros2_ws/src/localization/install/localization/share/ament_index/resource_index/packages
+[5.825s] copying package.xml -> /workspace/ros2_ws/src/localization/install/localization/share/localization
+[5.835s] running install_egg_info
+[5.850s] Copying build/localization/localization.egg-info to /workspace/ros2_ws/src/localization/install/localization/lib/python3.10/site-packages/localization-0.0.0-py3.10.egg-info
+[5.958s] running install_scripts
+[6.072s] Installing localization_node script to /workspace/ros2_ws/src/localization/install/localization/lib/localization
+[6.081s] writing list of installed files to '/workspace/ros2_ws/src/localization/build/localization/install.log'
+[6.147s] Invoked command in '/workspace/ros2_ws/src/localization' returned '0': PYTHONPATH=/workspace/ros2_ws/src/localization/build/localization/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/ros2_ws/src/localization/install/localization/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base build/localization build --build-base /workspace/ros2_ws/src/localization/build/localization/build install --record /workspace/ros2_ws/src/localization/build/localization/install.log --install-scripts $base/lib/localization --single-version-externally-managed install_data

@@ -1,0 +1,1 @@
+/workspace/ros2_ws/src/localization/launch/localization_bringup.launch.py

@@ -1,0 +1,17 @@
+[10.114s] Invoking command in '/workspace/build/robot_sim': PYTHONPATH=/workspace/build/robot_sim/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/install/robot_sim/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /workspace/build/robot_sim/build --no-deps symlink_data
+[11.406s] running develop
+[12.785s] running egg_info
+[12.786s] writing robot_sim.egg-info/PKG-INFO
+[12.808s] writing dependency_links to robot_sim.egg-info/dependency_links.txt
+[12.822s] writing entry points to robot_sim.egg-info/entry_points.txt
+[12.850s] writing requirements to robot_sim.egg-info/requires.txt
+[12.860s] writing top-level names to robot_sim.egg-info/top_level.txt
+[12.881s] reading manifest file 'robot_sim.egg-info/SOURCES.txt'
+[12.898s] writing manifest file 'robot_sim.egg-info/SOURCES.txt'
+[12.917s] running build_ext
+[12.921s] Creating /workspace/install/robot_sim/lib/python3.10/site-packages/robot-sim.egg-link (link to .)
+[12.940s] Installing simulator script to /workspace/install/robot_sim/lib/robot_sim
+[12.951s] 
+[12.958s] Installed /workspace/build/robot_sim
+[12.960s] running symlink_data
+[13.177s] Invoked command in '/workspace/build/robot_sim' returned '0': PYTHONPATH=/workspace/build/robot_sim/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/install/robot_sim/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /workspace/build/robot_sim/build --no-deps symlink_data
