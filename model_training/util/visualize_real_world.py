@@ -2,173 +2,357 @@ import matplotlib.pyplot as plt
 import torch
 import cv2
 import numpy as np
-from model.model import GridNet
-from model_training.datasets.objects.video_data_objects import device, dataset_test
-from model_training.datasets.objects.real_world_objects import dataset_real_world
+import time
+
+from model_training.model.model import GridNet
 from model_training.util.config import WIDTH, HEIGHT
 from model_training.util.world_frame import WorldFrame
 
-def visualize(model_path):
-    image = cv2.imread("/home/mooncyli/BU-RISE/model_training/initialization_apriltag.jpg")
+from model_training.train_val_loop import device
+
+
+def visualize(model_path, data_loader_test):
+
+    image = cv2.imread(
+        "model_training/initialization_apriltag.jpg"
+    )
+
     worldframe = WorldFrame(image)
 
-    # idx = 0  # choose any sample
     model = GridNet().to(device)
 
-    model.load_state_dict(torch.load(model_path,
-                                    map_location=device))
+    model.load_state_dict(
+        torch.load(
+            model_path,
+            map_location=device
+        )
+    )
+
     model.to(device)
     model.eval()
 
-    for idx in range(20):
-        # Get sample
-        image, target = dataset_test[idx]
+    shown = 0
 
-        # Skip samples with no valid ground truth
-        if (
-            torch.all(target["center"] == 0)
-            and target["orientation"].item() == 0
-        ):
-            continue
+    # ==================================================
+    # Iterate through batches
+    # ==================================================
 
-        with torch.no_grad():
-            images = image.unsqueeze(0).to(device)  # (1, 3, H, W)
-            logits = model(images)
+    for images, targets in data_loader_test:
 
-            scale = torch.tensor([WIDTH, HEIGHT], device=device)
+        # Process each image in the batch
+        for i in range(images.size(0)):
+
+            if shown >= 20:
+                return
+
+            image = images[i]
+
+            target = {
+                key: value[i]
+                for key, value in targets.items()
+            }
+
+            # ==================================================
+            # Skip samples with no valid ground truth
+            # ==================================================
+
+            if (
+                torch.all(target["center"] == 0)
+                and target["orientation"].item() == 0
+            ):
+                continue
+
+
+            # ==================================================
+            # Model inference
+            # ==================================================
+
+            input_image = image.unsqueeze(0).to(device)
+
+            # Start inference timer
+            start_time = time.perf_counter()
+
+            with torch.no_grad():
+                logits = model(input_image)
+
+            # End inference timer
+            end_time = time.perf_counter()
+
+            inference_time = (
+                end_time - start_time
+            )
+
+            inference_time_ms = (
+                inference_time * 1000
+            )
+
+            inference_fps = (
+                1 / inference_time
+                if inference_time > 0
+                else 0
+            )
+
+
+            # ==================================================
+            # Get predictions
+            # ==================================================
+
+            scale = torch.tensor(
+                [WIDTH, HEIGHT],
+                device=device
+            )
 
             pred_center = logits["center"][0]
-            pred_center *= scale
-            pred_orientation = logits["orientation"][0].argmax()
+            pred_center = pred_center * scale
 
-            if target:
-                gt_center = target["center"]
-                gt_center *= scale
-                gt_orientation = target["orientation"]
+            pred_orientation = (
+                logits["orientation"][0].argmax()
+            )
+
+            gt_center = target["center"]
+            gt_center = gt_center * scale
+
+            gt_orientation = target["orientation"]
 
 
-        # Convert image for plotting
-        mean = torch.tensor([0.485, 0.456, 0.406]).view(1, 1, 3)
-        std = torch.tensor([0.229, 0.224, 0.225]).view(1, 1, 3)
+            # ==================================================
+            # Convert image for plotting
+            # ==================================================
 
-        img = image.permute(1, 2, 0).cpu()
-        img = img * std + mean          # undo normalization
-        img = img.clamp(0, 1)
-        img = (img.numpy() * 255).astype(np.uint8)
+            mean = torch.tensor(
+                [0.485, 0.456, 0.406]
+            ).view(1, 1, 3)
 
-        # Print ground truth
-        print("Ground Truth")
-        print("------------")
+            std = torch.tensor(
+                [0.229, 0.224, 0.225]
+            ).view(1, 1, 3)
 
-        if "center" in target:
-            print("Centers:", gt_center)
+            img = image.permute(
+                1, 2, 0
+            ).cpu()
 
-        if "orientation" in target:
-            print("Orientations (bins):", gt_orientation)
-            print("Orientations (angle):", gt_orientation*5)
+            img = img * std + mean
 
-        print()
+            img = img.clamp(
+                0,
+                1
+            )
 
-        # Print predictions
-        print("Prediction")
-        print("----------")
+            img = (
+                img.numpy() * 255
+            ).astype(
+                np.uint8
+            ).copy()
 
-        if "center" in logits:
-            print("Centers:", pred_center)
 
-        if "orientation" in logits:
-            print("Orientations (bins):", pred_orientation)
-            print("Orientations (angle):", pred_orientation*5)
+            # ==================================================
+            # Print ground truth
+            # ==================================================
 
-        
-        if target:
-            orientation_error = torch.abs(pred_orientation - gt_orientation)
-            orientation_error = torch.minimum(orientation_error*5, 360 - orientation_error*5)
+            print(
+                "Ground Truth"
+            )
+
+            print(
+                "------------"
+            )
+
+            print(
+                "Centers:",
+                gt_center
+            )
+
+            print(
+                "Orientations (bins):",
+                gt_orientation
+            )
+
+            print(
+                "Orientations (angle):",
+                gt_orientation * 5
+            )
 
             print()
-            print("Center Error:", torch.norm(pred_center-gt_center))
-            print("Orientation Error:", orientation_error*5)
-
-        #TODO: make function for displaying center points
-        cx, cy = pred_center.cpu().tolist()
-        pred_world = worldframe.pixel_to_world([cx, cy])
-        print("Predicted World Coords:", pred_world)
-
-        # cv2.putText(img,
-        #             f"{pred_orientation*5} deg",
-        #             (int(cx), int(cy-10)),
-        #             cv2.FONT_HERSHEY_SIMPLEX,
-        #             0.6,
-        #             (0,255,0),
-        #             2)
-
-        # show predicted center point (red)
-        cv2.circle(img, (int(cx), int(cy)), radius=2, color=(0, 0, 255), thickness=-1)
-        cv2.putText(img,
-                    f"({cx}, {cy}",
-                    (int(cx), int(cy-10)),
-                    cv2.FONT_HERSHEY_SIMPLEX,
-                    0.6,
-                    (0,0,255),
-                    2)
-
-        if target:
-            # show actual center point (green)
-            cx, cy = gt_center.cpu().tolist()
-
-            gt_world = worldframe.pixel_to_world([cx, cy])
-            print("Actual World Coords:", gt_world)
-
-            cv2.circle(img, (int(cx), int(cy)), radius=2, color=(0, 255, 0), thickness=-1)
-            cv2.putText(img,
-                        f"({cx}, {cy}",
-                        (int(cx), int(cy-10)),
-                        cv2.FONT_HERSHEY_SIMPLEX,
-                        0.6,
-                        (0,255,0),
-                        2)
 
 
-        # Display image
-        #cv2.imshow("Robot Detection", img_bgr)
-        
-        # adds grid to image
-        # img = show_homography_grid(img)
+            # ==================================================
+            # Print predictions
+            # ==================================================
 
-        plt.figure("Image")
-        plt.imshow(img, aspect="equal")
-        plt.axis("off")
-        # plt.show()
+            print(
+                "Prediction"
+            )
 
-        # #show world coords
-        # plt.figure("World Coordinates")
+            print(
+                "----------"
+            )
 
-        # # Predicted robot
-        # plt.scatter(
-        #     pred_world[0],
-        #     pred_world[1],
-        #     color="red",
-        #     s=80,
-        #     label="Prediction",
-        # )
+            print(
+                "Centers:",
+                pred_center
+            )
 
-        # # Ground truth robot
-        # plt.scatter(
-        #     gt_world[0],
-        #     gt_world[1],
-        #     color="green",
-        #     s=80,
-        #     label="Ground Truth",
-        # )
+            print(
+                "Orientations (bins):",
+                pred_orientation
+            )
 
-        # plt.xlabel("X (m)")
-        # plt.ylabel("Y (m)")
-        # plt.title("Robot Position in World Frame")
-        # plt.grid(True)
-        # plt.axis("equal")
-        # plt.legend()
+            print(
+                "Orientations (angle):",
+                pred_orientation * 5
+            )
 
-        # plt.xlim(-5, 5)
-        # plt.ylim(-5, 5)
 
-        plt.show()
+            # ==================================================
+            # Print inference time
+            # ==================================================
+
+            print()
+
+            print(
+                f"Inference Time: "
+                f"{inference_time_ms:.3f} ms"
+            )
+
+            print(
+                f"Inference FPS: "
+                f"{inference_fps:.2f}"
+            )
+
+
+            # ==================================================
+            # Calculate errors
+            # ==================================================
+
+            orientation_error = torch.abs(
+                pred_orientation - gt_orientation
+            )
+
+            orientation_error = torch.minimum(
+                orientation_error * 5,
+                360 - orientation_error * 5
+            )
+
+            center_error = torch.norm(
+                pred_center - gt_center
+            )
+
+            print()
+
+            print(
+                "Center Error:",
+                center_error
+            )
+
+            print(
+                "Orientation Error:",
+                orientation_error
+            )
+
+
+            # ==================================================
+            # Convert predicted center to world coordinates
+            # ==================================================
+
+            cx, cy = (
+                pred_center
+                .cpu()
+                .tolist()
+            )
+
+            pred_world = (
+                worldframe.pixel_to_world(
+                    [cx, cy]
+                )
+            )
+
+            print(
+                "Predicted World Coords:",
+                pred_world
+            )
+
+
+            # ==================================================
+            # Draw predicted center
+            # ==================================================
+
+            cv2.circle(
+                img,
+                (int(cx), int(cy)),
+                radius=2,
+                color=(0, 0, 255),
+                thickness=-1
+            )
+
+            cv2.putText(
+                img,
+                f"({cx:.1f}, {cy:.1f})",
+                (int(cx), int(cy - 10)),
+                cv2.FONT_HERSHEY_SIMPLEX,
+                0.6,
+                (0, 0, 255),
+                2
+            )
+
+
+            # ==================================================
+            # Ground truth center
+            # ==================================================
+
+            cx, cy = (
+                gt_center
+                .cpu()
+                .tolist()
+            )
+
+            gt_world = (
+                worldframe.pixel_to_world(
+                    [cx, cy]
+                )
+            )
+
+            print(
+                "Actual World Coords:",
+                gt_world
+            )
+
+            cv2.circle(
+                img,
+                (int(cx), int(cy)),
+                radius=2,
+                color=(0, 255, 0),
+                thickness=-1
+            )
+
+            cv2.putText(
+                img,
+                f"({cx:.1f}, {cy:.1f})",
+                (int(cx), int(cy - 10)),
+                cv2.FONT_HERSHEY_SIMPLEX,
+                0.6,
+                (0, 255, 0),
+                2
+            )
+
+
+            # ==================================================
+            # Display image
+            # ==================================================
+
+            plt.figure(
+                "Image"
+            )
+
+            plt.imshow(
+                img,
+                aspect="equal"
+            )
+
+            plt.axis(
+                "off"
+            )
+
+            plt.show()
+
+
+            shown += 1

@@ -1,5 +1,6 @@
 import os
 import json
+import time
 from datetime import datetime
 
 import torch
@@ -25,6 +26,53 @@ from model_training.model.val_accuracy import calculate_val_accuracy
 device = torch.device("cpu")
 
 
+# ==================================================
+# Helper function for JSON serialization
+# ==================================================
+
+def make_json_serializable(obj):
+
+    if isinstance(obj, torch.Tensor):
+
+        if obj.numel() == 1:
+            return obj.item()
+
+        return obj.detach().cpu().tolist()
+
+    if isinstance(obj, np.ndarray):
+        return obj.tolist()
+
+    if isinstance(obj, np.generic):
+        return obj.item()
+
+    if isinstance(obj, dict):
+
+        return {
+            key: make_json_serializable(value)
+            for key, value in obj.items()
+        }
+
+    if isinstance(obj, list):
+
+        return [
+            make_json_serializable(value)
+            for value in obj
+        ]
+
+    if isinstance(obj, tuple):
+
+        return [
+            make_json_serializable(value)
+            for value in obj
+        ]
+
+    return obj
+
+
+# ==================================================
+# Training function
+# ==================================================
+
 def train(
     loaded_model,
     data_loader,
@@ -34,18 +82,23 @@ def train(
     finetuning=False,
     checkpoint=False,
     model_suffix="",
-    batch_size=32
+    batch_size=32,
+    experiment_name="experiment"
 ):
 
     print("training model with real world data")
+
 
     # ==================================================
     # Determine model name
     # ==================================================
 
     if finetuning:
+
         save_file_name = "finetuning_model" + model_suffix
+
     else:
+
         save_file_name = "initial_training_model" + model_suffix
 
 
@@ -53,28 +106,24 @@ def train(
     # Create unique experiment folder
     # ==================================================
 
-    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M")
 
-    experiment_name = (
-        f"{save_file_name}"
-        f"_lr{lr}"
-        f"_epochs{num_epochs}"
-        f"_bs{batch_size}"
-        f"_cw{CENTER_LOSS_WEIGHT}"
-        f"_ow{ORIENTATION_LOSS_WEIGHT}"
-        f"_cew{CE_LOSS_WEIGHT}"
-        f"_{timestamp}"
+    experiment_folder_name = (
+        f"{experiment_name}_{timestamp}"
     )
 
     results_dir = os.path.join(
         "model_training",
         "results",
-        experiment_name
+        experiment_folder_name
     )
 
-    os.makedirs(results_dir, exist_ok=True)
+    os.makedirs(
+        results_dir,
+        exist_ok=True
+    )
 
-    print(f"Saving training results to:")
+    print("Saving training results to:")
     print(results_dir)
 
 
@@ -96,7 +145,10 @@ def train(
             map_location=device
         )
 
-        model.load_state_dict(state_dict)
+        model.load_state_dict(
+            state_dict
+        )
+
         model.to(device)
 
 
@@ -117,7 +169,7 @@ def train(
 
     optimizer = torch.optim.Adam(
         model.parameters(),
-        lr=lr,
+        lr=lr
     )
 
 
@@ -163,6 +215,15 @@ def train(
 
 
     # ==================================================
+    # Timing storage
+    # ==================================================
+
+    epoch_times = []
+
+    training_start_time = time.perf_counter()
+
+
+    # ==================================================
     # Load checkpoint
     # ==================================================
 
@@ -173,50 +234,86 @@ def train(
             save_file_name + "_checkpoint.pth"
         )
 
-        checkpoint_data = torch.load(
-            checkpoint_path,
-            map_location=device
-        )
+        # ----------------------------------------------
+        # Check whether checkpoint exists
+        # ----------------------------------------------
 
-        model.load_state_dict(
-            checkpoint_data["model_state_dict"]
-        )
+        if os.path.exists(checkpoint_path):
 
-        optimizer.load_state_dict(
-            checkpoint_data["optimizer_state_dict"]
-        )
+            checkpoint_data = torch.load(
+                checkpoint_path,
+                map_location=device
+            )
 
-        lr_scheduler.load_state_dict(
-            checkpoint_data["scheduler_state_dict"]
-        )
+            model.load_state_dict(
+                checkpoint_data["model_state_dict"]
+            )
 
-        best_val_loss = checkpoint_data.get(
-            "best_val_loss",
-            float("inf")
-        )
+            optimizer.load_state_dict(
+                checkpoint_data["optimizer_state_dict"]
+            )
 
-        train_losses = checkpoint_data.get(
-            "train_losses",
-            []
-        )
+            lr_scheduler.load_state_dict(
+                checkpoint_data["scheduler_state_dict"]
+            )
 
-        val_losses = checkpoint_data.get(
-            "val_losses",
-            []
-        )
+            best_val_loss = checkpoint_data.get(
+                "best_val_loss",
+                float("inf")
+            )
 
-        start_epoch = checkpoint_data["epoch"] + 1
+            train_losses = checkpoint_data.get(
+                "train_losses",
+                []
+            )
 
-        model.to(device)
+            val_losses = checkpoint_data.get(
+                "val_losses",
+                []
+            )
 
-        print(f"Loaded checkpoint: {checkpoint_path}")
+            start_epoch = (
+                checkpoint_data["epoch"] + 1
+            )
+
+            model.to(device)
+
+            print(
+                f"Loaded checkpoint: "
+                f"{checkpoint_path}"
+            )
+
+        else:
+
+            print(
+                f"No checkpoint found at "
+                f"{checkpoint_path}"
+            )
+
+            print(
+                "Starting training from scratch."
+            )
 
 
     # ==================================================
     # Training loop
     # ==================================================
 
-    for epoch in range(start_epoch, num_epochs):
+    for epoch in range(
+        start_epoch,
+        num_epochs
+    ):
+
+        # ----------------------------------------------
+        # Start epoch timer
+        # ----------------------------------------------
+
+        epoch_start_time = time.perf_counter()
+
+
+        # ==================================================
+        # Train
+        # ==================================================
 
         (
             train_loss,
@@ -235,7 +332,11 @@ def train(
             orientation_criterion
         )
 
+
+        # ==================================================
         # Update learning rate
+        # ==================================================
+
         lr_scheduler.step()
 
 
@@ -243,17 +344,25 @@ def train(
         # Store training losses
         # ==================================================
 
-        train_losses.append(train_loss)
+        train_losses.append(
+            train_loss
+        )
 
-        ce_train_losses.append(ce_loss)
+        ce_train_losses.append(
+            ce_loss
+        )
 
-        center_train_losses.append(center_loss)
+        center_train_losses.append(
+            center_loss
+        )
 
         orientation_train_losses.append(
             orientation_loss
         )
 
-        class_train_losses.append(class_loss)
+        class_train_losses.append(
+            class_loss
+        )
 
 
         # ==================================================
@@ -274,10 +383,16 @@ def train(
         )
 
 
+        # ----------------------------------------------
+        # Store errors
+        # ----------------------------------------------
+
         all_center_error += center_error
 
         # Convert orientation bins to degrees
-        all_orientation_error += orientation_error * 5
+        all_orientation_error += (
+            orientation_error * 5
+        )
 
 
         # ==================================================
@@ -300,17 +415,39 @@ def train(
         )
 
 
-        val_losses.append(val_loss)
+        val_losses.append(
+            val_loss
+        )
 
-        ce_losses.append(ce_loss)
+        ce_losses.append(
+            ce_loss
+        )
 
-        center_losses.append(center_loss)
+        center_losses.append(
+            center_loss
+        )
 
         orientation_losses.append(
             orientation_loss
         )
 
-        class_losses.append(class_loss)
+        class_losses.append(
+            class_loss
+        )
+
+
+        # ==================================================
+        # End epoch timer
+        # ==================================================
+
+        epoch_time = (
+            time.perf_counter()
+            - epoch_start_time
+        )
+
+        epoch_times.append(
+            epoch_time
+        )
 
 
         # ==================================================
@@ -332,13 +469,19 @@ def train(
 
         print(
             f"CE Loss = "
-            f"{np.mean(ce_losses[-len(data_loader):]):.4f}, "
+            f"{ce_losses[-1]:.4f}, "
             f"Center Loss = "
-            f"{np.mean(center_losses[-len(data_loader):]):.4f}, "
+            f"{center_losses[-1]:.4f}, "
             f"Orientation Loss = "
-            f"{np.mean(orientation_losses[-len(data_loader):]):.4f}, "
+            f"{orientation_losses[-1]:.4f}, "
             f"Class Loss = "
-            f"{np.mean(class_losses[-len(data_loader):]):.4f}\n"
+            f"{class_losses[-1]:.4f}"
+        )
+
+        print(
+            f"Epoch Time = "
+            f"{epoch_time:.2f} seconds "
+            f"({epoch_time / 60:.2f} minutes)"
         )
 
 
@@ -351,7 +494,10 @@ def train(
             best_val_loss = val_loss
 
 
+            # ----------------------------------------------
             # Save global best model
+            # ----------------------------------------------
+
             global_best_path = os.path.join(
                 "model_training",
                 "best_" + save_file_name + ".pth"
@@ -363,7 +509,10 @@ def train(
             )
 
 
+            # ----------------------------------------------
             # Save best model inside experiment folder
+            # ----------------------------------------------
+
             experiment_best_path = os.path.join(
                 results_dir,
                 "best_model.pth"
@@ -385,17 +534,33 @@ def train(
         # ==================================================
 
         checkpoint_data = {
+
             "epoch": epoch,
-            "model_state_dict": model.state_dict(),
-            "optimizer_state_dict": optimizer.state_dict(),
-            "scheduler_state_dict": lr_scheduler.state_dict(),
-            "best_val_loss": best_val_loss,
-            "train_losses": train_losses,
-            "val_losses": val_losses,
+
+            "model_state_dict":
+                model.state_dict(),
+
+            "optimizer_state_dict":
+                optimizer.state_dict(),
+
+            "scheduler_state_dict":
+                lr_scheduler.state_dict(),
+
+            "best_val_loss":
+                best_val_loss,
+
+            "train_losses":
+                train_losses,
+
+            "val_losses":
+                val_losses
         }
 
 
+        # ----------------------------------------------
         # Save normal checkpoint
+        # ----------------------------------------------
+
         checkpoint_path = os.path.join(
             "model_training",
             save_file_name + "_checkpoint.pth"
@@ -407,7 +572,10 @@ def train(
         )
 
 
+        # ----------------------------------------------
         # Save checkpoint inside experiment folder
+        # ----------------------------------------------
+
         experiment_checkpoint_path = os.path.join(
             results_dir,
             "checkpoint.pth"
@@ -417,6 +585,124 @@ def train(
             checkpoint_data,
             experiment_checkpoint_path
         )
+
+
+    # ==================================================
+    # End total training timer
+    # ==================================================
+
+    total_training_time = (
+        time.perf_counter()
+        - training_start_time
+    )
+
+    average_epoch_time = (
+        np.mean(epoch_times)
+        if epoch_times
+        else 0
+    )
+
+
+    # ==================================================
+    # Measure inference time
+    # ==================================================
+
+    print(
+        "\nMeasuring inference time..."
+    )
+
+    model.eval()
+
+    inference_times = []
+
+    with torch.no_grad():
+
+        for images, targets in data_loader_test:
+
+            images = images.to(device)
+
+            start_time = time.perf_counter()
+
+            logits = model(images)
+
+            end_time = time.perf_counter()
+
+            inference_times.append(
+                end_time - start_time
+            )
+
+
+    # ==================================================
+    # Calculate inference statistics
+    # ==================================================
+
+    if inference_times:
+
+        total_inference_time = np.sum(
+            inference_times
+        )
+
+        average_batch_inference_time = np.mean(
+            inference_times
+        )
+
+        median_batch_inference_time = np.median(
+            inference_times
+        )
+
+        p95_batch_inference_time = np.percentile(
+            inference_times,
+            95
+        )
+
+
+        # ----------------------------------------------
+        # Average time per image
+        # ----------------------------------------------
+
+        total_images = (
+            len(data_loader_test.dataset)
+            if hasattr(
+                data_loader_test,
+                "dataset"
+            )
+            else len(inference_times) * batch_size
+        )
+
+        average_inference_time_per_image = (
+            total_inference_time
+            / total_images
+        )
+
+        inference_fps = (
+            1
+            / average_inference_time_per_image
+        )
+
+    else:
+
+        total_inference_time = 0
+
+        average_batch_inference_time = 0
+
+        median_batch_inference_time = 0
+
+        p95_batch_inference_time = 0
+
+        average_inference_time_per_image = 0
+
+        inference_fps = 0
+
+
+    print(
+        f"Average inference time per image: "
+        f"{average_inference_time_per_image * 1000:.3f} ms"
+    )
+
+    print(
+        f"Inference FPS: "
+        f"{inference_fps:.2f}"
+    )
 
 
     # ==================================================
@@ -441,7 +727,10 @@ def train(
     )
 
 
+    # ----------------------------------------------
     # Training vs validation
+    # ----------------------------------------------
+
     axes[0].plot(
         epochs,
         train_losses,
@@ -454,19 +743,26 @@ def train(
         label="Validation Loss"
     )
 
-    axes[0].set_xlabel("Epoch")
-    axes[0].set_ylabel("Loss")
+    axes[0].set_xlabel(
+        "Epoch"
+    )
+
+    axes[0].set_ylabel(
+        "Loss"
+    )
+
     axes[0].set_title(
         "Training vs Validation Loss"
     )
 
     axes[0].legend()
+
     axes[0].grid(True)
 
 
-    # ==================================================
+    # ----------------------------------------------
     # Center error histogram
-    # ==================================================
+    # ----------------------------------------------
 
     axes[1].hist(
         all_center_error,
@@ -474,16 +770,22 @@ def train(
         edgecolor="black"
     )
 
-    axes[1].set_xlabel("Center Error")
-    axes[1].set_ylabel("Frequency Count")
+    axes[1].set_xlabel(
+        "Center Error"
+    )
+
+    axes[1].set_ylabel(
+        "Frequency Count"
+    )
+
     axes[1].set_title(
         "Center Error Distribution"
     )
 
 
-    # ==================================================
+    # ----------------------------------------------
     # Orientation error histogram
-    # ==================================================
+    # ----------------------------------------------
 
     axes[2].hist(
         all_orientation_error,
@@ -495,7 +797,9 @@ def train(
         "Orientation Error (degrees)"
     )
 
-    axes[2].set_ylabel("Frequency Count")
+    axes[2].set_ylabel(
+        "Frequency Count"
+    )
 
     axes[2].set_title(
         "Orientation Error Distribution"
@@ -507,9 +811,11 @@ def train(
     # ==================================================
 
     axes[2].text(
+
         1.05,
         0.5,
 
+        f"Experiment: {experiment_name}\n"
         f"Learning Rate: {lr}\n"
         f"Epochs: {num_epochs}\n"
         f"Batch Size: {batch_size}\n"
@@ -592,9 +898,13 @@ def train(
     )
 
 
-    plt.xlabel("Epoch")
+    plt.xlabel(
+        "Epoch"
+    )
 
-    plt.ylabel("Loss")
+    plt.ylabel(
+        "Loss"
+    )
 
     plt.title(
         "Training Loss Components"
@@ -631,36 +941,65 @@ def train(
 
     training_data = {
 
-        "train_losses": train_losses,
+        "train_losses":
+            train_losses,
 
-        "val_losses": val_losses,
+        "val_losses":
+            val_losses,
 
-        "ce_losses": ce_losses,
+        "ce_losses":
+            ce_losses,
 
-        "center_losses": center_losses,
+        "center_losses":
+            center_losses,
 
-        "orientation_losses": orientation_losses,
+        "orientation_losses":
+            orientation_losses,
 
-        "class_losses": class_losses,
+        "class_losses":
+            class_losses,
 
-        "ce_train_losses": ce_train_losses,
+        "ce_train_losses":
+            ce_train_losses,
 
-        "center_train_losses": center_train_losses,
+        "center_train_losses":
+            center_train_losses,
 
-        "orientation_train_losses": (
-            orientation_train_losses
-        ),
+        "orientation_train_losses":
+            orientation_train_losses,
 
-        "class_train_losses": (
-            class_train_losses
-        ),
+        "class_train_losses":
+            class_train_losses,
 
-        "center_errors": all_center_error,
+        "center_errors":
+            all_center_error,
 
-        "orientation_errors": (
-            all_orientation_error
-        ),
+        "orientation_errors":
+            all_orientation_error,
+
+        "epoch_times_seconds":
+            epoch_times,
+
+        "total_training_time_seconds":
+            total_training_time,
+
+        "average_epoch_time_seconds":
+            average_epoch_time,
+
+        "inference_times_seconds":
+            inference_times,
+
+        "average_inference_time_per_image_seconds":
+            average_inference_time_per_image,
+
+        "inference_fps":
+            inference_fps
     }
+
+
+    training_data = make_json_serializable(
+        training_data
+    )
 
 
     training_data_path = os.path.join(
@@ -687,56 +1026,137 @@ def train(
 
     metrics = {
 
-        "model": "GridNet",
+        # ----------------------------------------------
+        # Experiment identification
+        # ----------------------------------------------
 
-        "dataset": model_suffix,
+        "experiment_name":
+            experiment_name,
 
-        "num_epochs": num_epochs,
+        "experiment_folder":
+            experiment_folder_name,
 
-        "learning_rate": lr,
+        "model":
+            "GridNet",
 
-        "batch_size": batch_size,
+        "dataset":
+            model_suffix,
 
-        "finetuning": finetuning,
 
-        "checkpoint": checkpoint,
+        # ----------------------------------------------
+        # Training parameters
+        # ----------------------------------------------
 
-        "center_loss_weight": (
-            CENTER_LOSS_WEIGHT
-        ),
+        "num_epochs":
+            num_epochs,
 
-        "orientation_loss_weight": (
-            ORIENTATION_LOSS_WEIGHT
-        ),
+        "learning_rate":
+            lr,
 
-        "ce_loss_weight": (
-            CE_LOSS_WEIGHT
-        ),
+        "batch_size":
+            batch_size,
 
-        "center_correct_range": (
-            CENTER_CORRECT_RANGE
-        ),
+        "finetuning":
+            finetuning,
 
-        "best_validation_loss": (
-            best_val_loss
-        ),
+        "checkpoint":
+            checkpoint,
 
-        "final_training_loss": (
-            train_losses[-1]
-            if train_losses
-            else None
-        ),
 
-        "final_validation_loss": (
-            val_losses[-1]
-            if val_losses
-            else None
-        ),
+        # ----------------------------------------------
+        # Loss parameters
+        # ----------------------------------------------
 
-        "timestamp": timestamp,
+        "center_loss_weight":
+            CENTER_LOSS_WEIGHT,
 
-        "experiment_name": experiment_name,
+        "orientation_loss_weight":
+            ORIENTATION_LOSS_WEIGHT,
+
+        "ce_loss_weight":
+            CE_LOSS_WEIGHT,
+
+        "center_correct_range":
+            CENTER_CORRECT_RANGE,
+
+
+        # ----------------------------------------------
+        # Final model metrics
+        # ----------------------------------------------
+
+        "best_validation_loss":
+            best_val_loss,
+
+        "final_training_loss":
+            (
+                train_losses[-1]
+                if train_losses
+                else None
+            ),
+
+        "final_validation_loss":
+            (
+                val_losses[-1]
+                if val_losses
+                else None
+            ),
+
+
+        # ----------------------------------------------
+        # Training time
+        # ----------------------------------------------
+
+        "total_training_time_seconds":
+            total_training_time,
+
+        "total_training_time_minutes":
+            total_training_time / 60,
+
+        "average_epoch_time_seconds":
+            average_epoch_time,
+
+        "average_epoch_time_minutes":
+            average_epoch_time / 60,
+
+
+        # ----------------------------------------------
+        # Inference time
+        # ----------------------------------------------
+
+        "total_inference_time_seconds":
+            total_inference_time,
+
+        "average_batch_inference_time_seconds":
+            average_batch_inference_time,
+
+        "median_batch_inference_time_seconds":
+            median_batch_inference_time,
+
+        "p95_batch_inference_time_seconds":
+            p95_batch_inference_time,
+
+        "average_inference_time_per_image_seconds":
+            average_inference_time_per_image,
+
+        "average_inference_time_per_image_ms":
+            average_inference_time_per_image * 1000,
+
+        "inference_fps":
+            inference_fps,
+
+
+        # ----------------------------------------------
+        # Timestamp
+        # ----------------------------------------------
+
+        "timestamp":
+            timestamp
     }
+
+
+    metrics = make_json_serializable(
+        metrics
+    )
 
 
     metrics_path = os.path.join(
@@ -761,9 +1181,22 @@ def train(
     # Print final results
     # ==================================================
 
-    print("\n========================================")
-    print("Training complete!")
-    print("========================================")
+    print(
+        "\n========================================"
+    )
+
+    print(
+        "Training complete!"
+    )
+
+    print(
+        "========================================"
+    )
+
+    print(
+        f"Experiment: "
+        f"{experiment_name}"
+    )
 
     print(
         f"Best validation loss: "
@@ -771,8 +1204,32 @@ def train(
     )
 
     print(
+        f"Total training time: "
+        f"{total_training_time:.2f} seconds "
+        f"({total_training_time / 60:.2f} minutes)"
+    )
+
+    print(
+        f"Average epoch time: "
+        f"{average_epoch_time:.2f} seconds "
+        f"({average_epoch_time / 60:.2f} minutes)"
+    )
+
+    print(
+        f"Average inference time: "
+        f"{average_inference_time_per_image * 1000:.3f} ms/image"
+    )
+
+    print(
+        f"Inference FPS: "
+        f"{inference_fps:.2f}"
+    )
+
+    print(
         f"Results saved to:\n"
         f"{results_dir}"
     )
 
-    print("========================================\n")
+    print(
+        "========================================\n"
+    )
